@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA06C0382AB841CF00C63E59 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */; };
 		CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983C2AB432A000521291 /* AppDelegate.swift */; };
 		CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983E2AB432A000521291 /* SceneDelegate.swift */; };
 		CA0898412AB432A000521291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898402AB432A000521291 /* ViewController.swift */; };
@@ -16,7 +17,7 @@
 		CA0898542AB432A300521291 /* SDUSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898532AB432A300521291 /* SDUSampleAppTests.swift */; };
 		CA08985E2AB432A300521291 /* SDUSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08985D2AB432A300521291 /* SDUSampleAppUITests.swift */; };
 		CA0898602AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08985F2AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift */; };
-		CA08986E2AB434AD00521291 /* LoginScreenUI.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CA08986D2AB434AD00521291 /* LoginScreenUI.geojson */; };
+		CA08986E2AB434AD00521291 /* LoginScreenUI.json in Resources */ = {isa = PBXBuildFile; fileRef = CA08986D2AB434AD00521291 /* LoginScreenUI.json */; };
 		CA0898712AB4751700521291 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898702AB4751700521291 /* ScreenModel.swift */; };
 		CA0898742AB481AF00521291 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898732AB481AF00521291 /* NetworkServiceProtocol.swift */; };
 		CA0898762AB481FB00521291 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898752AB481FB00521291 /* LocalService.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CA0898392AB432A000521291 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08983C2AB432A000521291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA08983E2AB432A000521291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		CA0898592AB432A300521291 /* SDUSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDUSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08985D2AB432A300521291 /* SDUSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppUITests.swift; sourceTree = "<group>"; };
 		CA08985F2AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CA08986D2AB434AD00521291 /* LoginScreenUI.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoginScreenUI.geojson; sourceTree = "<group>"; };
+		CA08986D2AB434AD00521291 /* LoginScreenUI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginScreenUI.json; sourceTree = "<group>"; };
 		CA0898702AB4751700521291 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		CA0898732AB481AF00521291 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		CA0898752AB481FB00521291 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		CA06C0292AB8144C00C63E59 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,7 +152,7 @@
 		CA08986C2AB4346200521291 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA08986D2AB434AD00521291 /* LoginScreenUI.geojson */,
+				CA08986D2AB434AD00521291 /* LoginScreenUI.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -278,7 +281,7 @@
 				CA0898492AB432A300521291 /* LaunchScreen.storyboard in Resources */,
 				CA0898462AB432A300521291 /* Assets.xcassets in Resources */,
 				CA0898442AB432A000521291 /* Main.storyboard in Resources */,
-				CA08986E2AB434AD00521291 /* LoginScreenUI.geojson in Resources */,
+				CA08986E2AB434AD00521291 /* LoginScreenUI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +312,7 @@
 				CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */,
 				CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */,
 				CA0898762AB481FB00521291 /* LocalService.swift in Sources */,
+				CA06C0382AB841CF00C63E59 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

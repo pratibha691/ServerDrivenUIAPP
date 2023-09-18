@@ -25,8 +25,8 @@ struct ScreenElement: Decodable {
 }
 
 enum ComponentType: String, Decodable {
-    case lable
-    case textfield
+    case label
+    case textInput
     case button
 }
 
