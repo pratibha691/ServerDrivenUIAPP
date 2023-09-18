@@ -51,25 +51,25 @@ struct ScreenTitleStyle: Decodable {
 
 extension ScreenModel {
     
-    func buildUIComponents() -> [UIComponent] {
-        
-        var components: [UIComponent] = []
-        
-        for element in self.elements ?? [] {
-            switch element.type {
-            case .label:
-                debugPrint("Test")
-            case .textInput:
-                debugPrint("Test")
-            case .button:
-                debugPrint("Test")
-            case .none:
-                debugPrint("Test")
-
-            }
-        }
-        
-        return components
-    }
+//    func buildUIComponents() -> [UIComponent] {
+//        
+//        var components: [UIComponent] = []
+//        
+//        for element in self.elements ?? [] {
+//            switch element.type {
+//            case .label:
+//                debugPrint("Test")
+//            case .textInput:
+//                debugPrint("Test")
+//            case .button:
+//                debugPrint("Test")
+//            case .none:
+//                debugPrint("Test")
+//
+//            }
+//        }
+//        
+//        return components
+//    }
     
 }

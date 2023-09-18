@@ -67,7 +67,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="HPV-6q-9Ca" id="2Oi-3y-bDG"/>
+                        <outlet property="contentView" destination="HPV-6q-9Ca" id="mxs-PO-jnJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
