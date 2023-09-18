@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 protocol UIComponent {
-    func render() -> UIView
+    
 }
 

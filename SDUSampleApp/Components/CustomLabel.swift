@@ -38,3 +38,9 @@ struct LabelConfigration: LabelConfigurable {
     var textColor: UIColor
     var font: UIFont
 }
+
+extension CustomLabel: UIComponent {
+    func render() -> UIView {
+        return 
+    }
+}

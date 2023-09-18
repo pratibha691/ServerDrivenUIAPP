@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 // MARK: - ScreenModel
 struct ScreenModel: Decodable {
     let screen: String?
@@ -51,25 +51,27 @@ struct ScreenTitleStyle: Decodable {
 
 extension ScreenModel {
     
-//    func buildUIComponents() -> [UIComponent] {
-//        
-//        var components: [UIComponent] = []
-//        
-//        for element in self.elements ?? [] {
-//            switch element.type {
-//            case .label:
-//                debugPrint("Test")
-//            case .textInput:
-//                debugPrint("Test")
-//            case .button:
-//                debugPrint("Test")
-//            case .none:
-//                debugPrint("Test")
-//
-//            }
-//        }
-//        
-//        return components
-//    }
+    func buildUIComponents() -> [UIComponent] {
+        
+        var components: [UIComponent] = []
+        
+        for element in self.elements ?? [] {
+            switch element.type {
+            case .label:
+                components.append(CustomLabel(attributes: LabelConfigration(textColor: UIColor.red, font: UIFont.systemFont(ofSize: CGFloat(element.style.fontSize ?? 16)))))
+                debugPrint("Test")
+
+            case .textInput:
+                debugPrint("Test")
+            case .button:
+                debugPrint("Test")
+            case .none:
+                debugPrint("Test")
+
+            }
+        }
+        
+        return components
+    }
     
 }

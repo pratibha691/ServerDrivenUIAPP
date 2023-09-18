@@ -16,10 +16,12 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewModel = LoginViewModel(service: LocalService())
-        viewModel.load()
-        let aa = CustomLabel(attributes: LabelConfigration(textColor: .green, font: .systemFont(ofSize: 20)))
-        aa.text = "hello"
-        contentView.addArrangedSubview(aa)
+        viewModel.load { [weak self] success in
+            for view in self?.viewModel.components ?? [] {
+                self?.contentView.addArrangedSubview(view)
+            }
+        }
+       
         /*
         aa.translatesAutoresizingMaskIntoConstraints = false
         aa.widthAnchor.constraint(equalToConstant: 150).isActive = true
