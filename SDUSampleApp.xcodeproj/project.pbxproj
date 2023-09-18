@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CA06C0382AB841CF00C63E59 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */; };
+		CA06C03A2AB84D1400C63E59 /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0392AB84D1400C63E59 /* UIComponent.swift */; };
 		CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983C2AB432A000521291 /* AppDelegate.swift */; };
 		CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983E2AB432A000521291 /* SceneDelegate.swift */; };
-		CA0898412AB432A000521291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898402AB432A000521291 /* ViewController.swift */; };
+		CA0898412AB432A000521291 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898402AB432A000521291 /* LoginViewController.swift */; };
 		CA0898442AB432A000521291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0898422AB432A000521291 /* Main.storyboard */; };
 		CA0898462AB432A300521291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0898452AB432A300521291 /* Assets.xcassets */; };
 		CA0898492AB432A300521291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0898472AB432A300521291 /* LaunchScreen.storyboard */; };
@@ -42,10 +43,11 @@
 
 /* Begin PBXFileReference section */
 		CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CA06C0392AB84D1400C63E59 /* UIComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponent.swift; sourceTree = "<group>"; };
 		CA0898392AB432A000521291 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08983C2AB432A000521291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA08983E2AB432A000521291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA0898402AB432A000521291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA0898402AB432A000521291 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA0898432AB432A000521291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA0898452AB432A300521291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0898482AB432A300521291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,7 +125,8 @@
 				CA08986C2AB4346200521291 /* Resources */,
 				CA08983E2AB432A000521291 /* SceneDelegate.swift */,
 				CA08983C2AB432A000521291 /* AppDelegate.swift */,
-				CA0898402AB432A000521291 /* ViewController.swift */,
+				CA0898402AB432A000521291 /* LoginViewController.swift */,
+				CA06C0392AB84D1400C63E59 /* UIComponent.swift */,
 				CA0898422AB432A000521291 /* Main.storyboard */,
 				CA0898452AB432A300521291 /* Assets.xcassets */,
 				CA0898472AB432A300521291 /* LaunchScreen.storyboard */,
@@ -307,12 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0898742AB481AF00521291 /* NetworkServiceProtocol.swift in Sources */,
-				CA0898412AB432A000521291 /* ViewController.swift in Sources */,
+				CA0898412AB432A000521291 /* LoginViewController.swift in Sources */,
 				CA0898712AB4751700521291 /* ScreenModel.swift in Sources */,
 				CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */,
 				CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */,
 				CA0898762AB481FB00521291 /* LocalService.swift in Sources */,
 				CA06C0382AB841CF00C63E59 /* LoginViewModel.swift in Sources */,
+				CA06C03A2AB84D1400C63E59 /* UIComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

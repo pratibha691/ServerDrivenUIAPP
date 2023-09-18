@@ -1,24 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SDUSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sf-Ou-OZw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaM-xx-bv5">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-wP-Upt">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="698"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HPV-6q-9Ca">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="698"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="HPV-6q-9Ca" secondAttribute="bottom" id="KLE-hA-1sS"/>
+                                                    <constraint firstItem="HPV-6q-9Ca" firstAttribute="leading" secondItem="Ccl-wP-Upt" secondAttribute="leading" id="LqS-GE-ltg"/>
+                                                    <constraint firstItem="HPV-6q-9Ca" firstAttribute="top" secondItem="Ccl-wP-Upt" secondAttribute="top" id="WSE-Pu-chq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HPV-6q-9Ca" secondAttribute="trailing" id="fOX-JN-fdP"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ccl-wP-Upt" secondAttribute="bottom" id="EZQ-xl-7W8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ccl-wP-Upt" secondAttribute="trailing" id="XKr-Gq-iao"/>
+                                            <constraint firstItem="Ccl-wP-Upt" firstAttribute="leading" secondItem="TaM-xx-bv5" secondAttribute="leading" id="ny4-KK-MG3"/>
+                                            <constraint firstItem="Ccl-wP-Upt" firstAttribute="top" secondItem="TaM-xx-bv5" secondAttribute="top" id="yMz-Qk-0jN"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ccl-wP-Upt" firstAttribute="height" secondItem="0sf-Ou-OZw" secondAttribute="height" multiplier="0.919631" id="44F-8x-XsO"/>
+                                    <constraint firstItem="TaM-xx-bv5" firstAttribute="top" secondItem="0sf-Ou-OZw" secondAttribute="top" id="8Tg-wR-C9i"/>
+                                    <constraint firstAttribute="trailing" secondItem="TaM-xx-bv5" secondAttribute="trailing" id="GjS-aa-LTP"/>
+                                    <constraint firstItem="Ccl-wP-Upt" firstAttribute="width" secondItem="0sf-Ou-OZw" secondAttribute="width" id="Z8m-lY-19K"/>
+                                    <constraint firstItem="TaM-xx-bv5" firstAttribute="leading" secondItem="0sf-Ou-OZw" secondAttribute="leading" id="b9v-lr-59w"/>
+                                    <constraint firstAttribute="bottom" secondItem="TaM-xx-bv5" secondAttribute="bottom" id="ozj-yx-yFW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0sf-Ou-OZw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5KX-f4-UdW"/>
+                            <constraint firstItem="0sf-Ou-OZw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JcG-LI-sRu"/>
+                            <constraint firstItem="0sf-Ou-OZw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fuQ-5a-llY"/>
+                            <constraint firstItem="0sf-Ou-OZw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vGu-Kw-ZNS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="HPV-6q-9Ca" id="2Oi-3y-bDG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -9,6 +9,7 @@ import Foundation
 class LoginViewModel {
     
     private var service: NetworkServiceProtocol
+    var components: [UIComponent] =  []
     
     init(service: NetworkServiceProtocol) {
         self.service = service
@@ -19,6 +20,7 @@ class LoginViewModel {
         service.load("LoginScreenUI") { (result: Result<ScreenModel, Error>) in
             switch result {
             case .success(let screenModel):
+                self.components = screenModel.buildUIComponents()
                 // Handle the successfully loaded and decoded `ScreenModel`.
                 // Example: update your UI with the loaded data.
                 debugPrint(screenModel)
