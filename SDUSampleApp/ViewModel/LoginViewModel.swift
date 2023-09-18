@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 class LoginViewModel {
     
     private var service: NetworkServiceProtocol
-    var components: [UIComponent] =  []
+    var components: [UIView] =  []
     
     init(service: NetworkServiceProtocol) {
         self.service = service

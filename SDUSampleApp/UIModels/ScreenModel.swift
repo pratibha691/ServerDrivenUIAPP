@@ -51,9 +51,9 @@ struct ScreenTitleStyle: Decodable {
 
 extension ScreenModel {
     
-    func buildUIComponents() -> [UIComponent] {
+    func buildUIComponents() -> [UIView] {
         
-        var components: [UIComponent] = []
+        var components: [UIView] = []
         
         for element in self.elements ?? [] {
             switch element.type {

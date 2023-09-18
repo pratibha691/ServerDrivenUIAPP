@@ -31,6 +31,7 @@ class CustomLabel: UILabel {
     private func setupUI(_ attributes:LabelConfigurable) {
         self.textColor = attributes.textColor
         self.font = attributes.font
+        self.text = "hello"
     }
 }
 
@@ -39,8 +40,3 @@ struct LabelConfigration: LabelConfigurable {
     var font: UIFont
 }
 
-extension CustomLabel: UIComponent {
-    func render() -> UIView {
-        return 
-    }
-}
