@@ -19,17 +19,9 @@ class LoginViewController: UIViewController {
         viewModel.load { [weak self] success in
             if let dataV = self?.viewModel.components.first {
                 for someView in dataV.view {
-                    let tempView = UIView(frame: .zero)
-                    tempView.addSubview(someView)
                     let dataToShow = dataV.viewData.first(where: {$0.id == someView.tag})
-                    someView.translatesAutoresizingMaskIntoConstraints = false
-                    someView.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: CGFloat(dataToShow?.padding?.paddingLeft ?? 16)).isActive = true
-                    someView.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: CGFloat(dataToShow?.padding?.paddingRight ?? 16)).isActive = true
-                    someView.bottomAnchor.constraint(equalTo: tempView.bottomAnchor, constant: CGFloat(dataToShow?.padding?.bottom ?? 16)).isActive = true
-                    someView.topAnchor.constraint(equalTo: tempView.topAnchor, constant: CGFloat(dataToShow?.padding?.top ?? 16)).isActive = true
-
+                    let tempView = self?.genrateUIView(padding: dataToShow?.padding, viewG: someView) ?? UIView()
                     self?.contentView.addArrangedSubview(tempView)
-
                 }
             }
 //            for element in self?.viewModel.components ?? [] {
@@ -54,6 +46,16 @@ class LoginViewController: UIViewController {
 */
     }
 
+    func genrateUIView(padding:Padding?, viewG:UIView) -> UIView {
+        let tempView = UIView(frame: .zero)
+        tempView.addSubview(viewG)
+        viewG.translatesAutoresizingMaskIntoConstraints = false
+        viewG.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: CGFloat(padding?.paddingLeft ?? 16)).isActive = true
+        viewG.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: CGFloat(padding?.paddingRight ?? 16)).isActive = true
+        viewG.bottomAnchor.constraint(equalTo: tempView.bottomAnchor, constant: CGFloat(padding?.bottom ?? 16)).isActive = true
+        viewG.topAnchor.constraint(equalTo: tempView.topAnchor, constant: CGFloat(padding?.top ?? 16)).isActive = true
+        return tempView
+    }
 
 }
 
