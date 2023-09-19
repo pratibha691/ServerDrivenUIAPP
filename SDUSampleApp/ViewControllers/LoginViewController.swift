@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
                 for someView in dataV.view {
                     let dataToShow = dataV.viewData.first(where: {$0.id == someView.tag})
                     let tempView = self?.genrateUIView(padding: dataToShow?.padding, viewG: someView) ?? UIView()
-                    tempView.backgroundColor = .green
+                    tempView.backgroundColor = .white
                     self?.contentView.addArrangedSubview(tempView)
                 }
             }
@@ -46,20 +46,5 @@ class LoginViewController: UIViewController {
         
 */
     }
-
-    func genrateUIView(padding:Padding?, viewG:UIView) -> UIView {
-        let tempView = UIView(frame: .zero)
-        tempView.clipsToBounds = true
-        tempView.addSubview(viewG)
-        //viewG.backgroundColor = .gray
-        viewG.translatesAutoresizingMaskIntoConstraints = false
-        viewG.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: CGFloat(padding?.paddingLeft ?? 16)).isActive = true
-        viewG.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: -CGFloat(padding?.paddingRight ?? 16)).isActive = true
-        viewG.bottomAnchor.constraint(equalTo: tempView.bottomAnchor, constant: -CGFloat(padding?.bottom ?? 16)).isActive = true
-        viewG.topAnchor.constraint(equalTo: tempView.topAnchor, constant: CGFloat(padding?.top ?? 16)).isActive = true
-        
-        return tempView
-    }
-
 }
 

@@ -110,7 +110,6 @@
 				1040C88C2AB845A200968E7A /* CustomLabel.swift */,
 				1040C88E2AB848D000968E7A /* CustomButton.swift */,
 				1040C8902AB848DD00968E7A /* CustomTextField.swift */,
-				1040C8922AB84C6700968E7A /* Extensions.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -146,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CA06C04C2AB9827500C63E59 /* UIColorExtension.swift */,
+				1040C8922AB84C6700968E7A /* Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";

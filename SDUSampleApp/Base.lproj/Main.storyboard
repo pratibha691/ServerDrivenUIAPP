@@ -23,15 +23,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-wP-Upt">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="698"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HPV-6q-9Ca">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="698"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HPV-6q-9Ca">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="HPV-6q-9Ca" secondAttribute="bottom" id="KLE-hA-1sS"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HPV-6q-9Ca" secondAttribute="bottom" id="KLE-hA-1sS"/>
                                                     <constraint firstItem="HPV-6q-9Ca" firstAttribute="leading" secondItem="Ccl-wP-Upt" secondAttribute="leading" id="LqS-GE-ltg"/>
                                                     <constraint firstItem="HPV-6q-9Ca" firstAttribute="top" secondItem="Ccl-wP-Upt" secondAttribute="top" id="WSE-Pu-chq"/>
                                                     <constraint firstAttribute="trailing" secondItem="HPV-6q-9Ca" secondAttribute="trailing" id="fOX-JN-fdP"/>
@@ -48,7 +48,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Ccl-wP-Upt" firstAttribute="height" secondItem="0sf-Ou-OZw" secondAttribute="height" multiplier="0.919631" id="44F-8x-XsO"/>
+                                    <constraint firstItem="Ccl-wP-Upt" firstAttribute="height" secondItem="0sf-Ou-OZw" secondAttribute="height" priority="250" id="44F-8x-XsO"/>
                                     <constraint firstItem="TaM-xx-bv5" firstAttribute="top" secondItem="0sf-Ou-OZw" secondAttribute="top" id="8Tg-wR-C9i"/>
                                     <constraint firstAttribute="trailing" secondItem="TaM-xx-bv5" secondAttribute="trailing" id="GjS-aa-LTP"/>
                                     <constraint firstItem="Ccl-wP-Upt" firstAttribute="width" secondItem="0sf-Ou-OZw" secondAttribute="width" id="Z8m-lY-19K"/>
