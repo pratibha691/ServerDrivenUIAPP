@@ -32,6 +32,7 @@
             "key": "username",
             "style": {
                 "backgroundColor": "#f0f0f0",
+                "color": "#555",
                 "fontSize": 16
             }
         },
@@ -43,6 +44,7 @@
             "secure": true,
             "style": {
                 "backgroundColor": "#f0f0f0",
+                "color": "#555",
                 "fontSize": 16
             }
         },
@@ -53,7 +55,7 @@
             "action": "login",
             "style": {
                 "backgroundColor": "#0074cc",
-                "color": "#fff",
+                "color": "#ffffff",
                 "fontSize": 18
             }
         },
@@ -63,7 +65,7 @@
             "text": "Forgot Password?",
             "action": "forgot_password",
             "style": {
-                "color": "#0074cc",
+                "color": "#ffffff",
                 "fontSize": 14
             }
         }

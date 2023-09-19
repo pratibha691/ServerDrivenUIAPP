@@ -13,7 +13,7 @@ struct LabelBuilder: UIComponentBuilder {
         let fontSize = CGFloat(element.style.fontSize ?? 16)
         let configuration = LabelConfigration(id: element.id,
             text: element.text,
-            textColor: .black,
+            textColor: UIColor(hex: element.style.color),
             font: UIFont.systemFont(ofSize: fontSize)
         )
         return CustomLabel(attributes: configuration)

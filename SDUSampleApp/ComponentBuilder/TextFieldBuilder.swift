@@ -14,7 +14,7 @@ struct TextFieldBuilder: UIComponentBuilder {
         let fontSize = CGFloat(element.style.fontSize ?? 16)
         let configuration = TextFieldConfigration(id: element.id,
             backgroundColor: UIColor(hex: element.style.backgroundColor),
-            textColor: .black,
+            textColor: UIColor(hex: element.style.color),
             font: UIFont.systemFont(ofSize: fontSize),
             placeholder: element.placeholder
         )

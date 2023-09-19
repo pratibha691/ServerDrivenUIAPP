@@ -13,7 +13,7 @@ struct ButtonBuilder: UIComponentBuilder {
         let fontSize = CGFloat(element.style.fontSize ?? 16)
         let configuration = ButtonConfigration(id: element.id,
             backgroundColor: .blue,
-            titleColor: .white,
+            titleColor: UIColor(hex: element.style.color),
             titleFont: UIFont.systemFont(ofSize: fontSize),
             cornorRadius: 12,
             title: element.text ?? ""
