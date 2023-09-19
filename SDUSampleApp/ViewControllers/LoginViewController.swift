@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
         let tempView = UIView(frame: .zero)
         tempView.clipsToBounds = true
         tempView.addSubview(viewG)
-        viewG.backgroundColor = .gray
+        //viewG.backgroundColor = .gray
         viewG.translatesAutoresizingMaskIntoConstraints = false
         viewG.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: CGFloat(padding?.paddingLeft ?? 16)).isActive = true
         viewG.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: -CGFloat(padding?.paddingRight ?? 16)).isActive = true

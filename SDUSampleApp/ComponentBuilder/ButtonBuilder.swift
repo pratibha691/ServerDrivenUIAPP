@@ -11,7 +11,7 @@ import UIKit
 struct ButtonBuilder: UIComponentBuilder {
     func build(element: ScreenElement) -> CustomButton {
         let fontSize = CGFloat(element.style.fontSize ?? 16)
-        let configuration = ButtonConfigration(
+        let configuration = ButtonConfigration(id: element.id,
             backgroundColor: .blue,
             titleColor: .white,
             titleFont: UIFont.systemFont(ofSize: fontSize),
