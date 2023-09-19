@@ -1,65 +1,71 @@
 {
-  "screen": "login",
-  "title": {
-    "text": "Login",
-    "style": {
-      "color": "#333",
-      "fontSize": 24,
-      
-    }
-  },
-  "elements": [
-    {
-      "type": "label",
-      "text": "Log in to your account",
-      "style": {
-        "color": "#555",
-        "fontSize": 18
-      },
-      "padding" : {
-          "left" : 16,
-          "right" : 16
-      }
-
+    "screen": "login",
+    "title": {
+        "text": "Login",
+        "style": {
+            "color": "#333",
+            "fontSize": 24
+            
+        }
     },
-    {
-      "type": "textInput",
-      "placeholder": "Username",
-      "key": "username",
-      "style": {
-        "backgroundColor": "#f0f0f0",
-        "fontSize": 16
-      }
-    },
-    {
-      "type": "textInput",
-      "placeholder": "Password",
-      "key": "password",
-      "secure": true,
-      "style": {
-        "backgroundColor": "#f0f0f0",
-        "fontSize": 16
-      }
-    },
-    {
-      "type": "button",
-      "text": "Log In",
-      "action": "login",
-      "style": {
-        "backgroundColor": "#0074cc",
-        "color": "#fff",
-        "fontSize": 18,
-      }
-    },
-    {
-      "type": "button",
-      "text": "Forgot Password?",
-      "action": "forgot_password",
-      "style": {
-        "color": "#0074cc",
-        "fontSize": 14,
-      }
-    }
-  ]
+    "elements": [
+        {
+            "id":1,
+            "type": "label",
+            "text": "Log in to your account",
+            "style": {
+                "color": "#555",
+                "fontSize": 18
+            },
+            "padding" : {
+                "left" : 36,
+                "right" : 36,
+                "top":36,
+                "bottom":36
+            }
+            
+        },
+        {
+            "id":2,
+            "type": "textInput",
+            "placeholder": "Username",
+            "key": "username",
+            "style": {
+                "backgroundColor": "#f0f0f0",
+                "fontSize": 16
+            }
+        },
+        {
+            "id":3,
+            "type": "textInput",
+            "placeholder": "Password",
+            "key": "password",
+            "secure": true,
+            "style": {
+                "backgroundColor": "#f0f0f0",
+                "fontSize": 16
+            }
+        },
+        {
+            "id":4,
+            "type": "button",
+            "text": "Log In",
+            "action": "login",
+            "style": {
+                "backgroundColor": "#0074cc",
+                "color": "#fff",
+                "fontSize": 18
+            }
+        },
+        {
+            "id":5,
+            "type": "button",
+            "text": "Forgot Password?",
+            "action": "forgot_password",
+            "style": {
+                "color": "#0074cc",
+                "fontSize": 14
+            }
+        }
+    ]
 }
-

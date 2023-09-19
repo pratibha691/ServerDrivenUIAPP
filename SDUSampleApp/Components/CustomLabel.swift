@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol LabelConfigurable {
+    var id: Int { get }
     var text: String? { get }
     var textColor:UIColor { get }
     var font: UIFont { get }
@@ -30,6 +31,7 @@ class CustomLabel: UILabel {
     
     //MARK: - UpdateUI
     private func setupUI(_ attributes:LabelConfigurable) {
+        self.tag = attributes.id
         self.textColor = attributes.textColor
         self.font = attributes.font
         self.text = attributes.text
@@ -37,6 +39,7 @@ class CustomLabel: UILabel {
 }
 
 struct LabelConfigration: LabelConfigurable {
+    var id: Int
     var text: String?
     var textColor: UIColor
     var font: UIFont

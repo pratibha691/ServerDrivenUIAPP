@@ -11,23 +11,36 @@ import UIKit
 struct ScreenModel: Decodable {
     let screen: String?
     let title: ScreenTitle?
-    let elements: [[ScreenElement]]?
+    let elements: [ScreenElement]?
 }
 
 // MARK: - Element
 struct ScreenElement: Decodable {
+    let id: Int
     let type: ComponentType?
     let text: String?
     let style: ScreenElementStyle
     let placeholder, key: String?
     let secure: Bool?
     let action: String?
+    let padding: Padding?
 }
 
 enum ComponentType: String, Decodable {
     case label
     case textInput
     case button
+}
+
+// MARK: - Padding
+struct Padding: Decodable {
+    let paddingLeft, paddingRight, top, bottom: Int
+
+    enum CodingKeys: String, CodingKey {
+        case paddingLeft = "left"
+        case paddingRight = "right"
+        case top, bottom
+    }
 }
 
 // MARK: - ElementStyle

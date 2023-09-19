@@ -8,10 +8,15 @@
 import Foundation
 import UIKit
 
+struct Components {
+    let viewData: [ScreenElement]
+    let view: [UIView]
+}
+
 class LoginViewModel {
     
     private var service: NetworkServiceProtocol
-    var components: [UIView] =  []
+    var components: [Components] =  []
     
     init(service: NetworkServiceProtocol) {
         self.service = service
@@ -22,7 +27,7 @@ class LoginViewModel {
         service.load("LoginScreenUI") { (result: Result<ScreenModel, Error>) in
             switch result {
             case .success(let screenModel):
-                self.components = ScreenBuilder(elements: screenModel.elements ?? []).buildUIComponents()
+                self.components = [Components(viewData: screenModel.elements ?? [], view: ScreenBuilder(elements: screenModel.elements ?? []).buildUIComponents())]
                 // Handle the successfully loaded and decoded `ScreenModel`.
                 // Example: update your UI with the loaded data.
                 completion(true)
