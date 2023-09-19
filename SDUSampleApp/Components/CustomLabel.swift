@@ -40,6 +40,5 @@ struct LabelConfigration: LabelConfigurable {
     var text: String?
     var textColor: UIColor
     var font: UIFont
-    
 }
 

@@ -12,7 +12,10 @@
 		1040C8912AB848DD00968E7A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040C8902AB848DD00968E7A /* CustomTextField.swift */; };
 		1040C8932AB84C6700968E7A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040C8922AB84C6700968E7A /* Extensions.swift */; };
 		CA06C0382AB841CF00C63E59 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */; };
-		CA06C0402AB85CD600C63E59 /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C03F2AB85CD600C63E59 /* UIComponent.swift */; };
+		CA06C0432AB9617A00C63E59 /* ScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0422AB9617A00C63E59 /* ScreenBuilder.swift */; };
+		CA06C0452AB961D800C63E59 /* TextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0442AB961D700C63E59 /* TextFieldBuilder.swift */; };
+		CA06C0472AB9627F00C63E59 /* LabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0462AB9627F00C63E59 /* LabelBuilder.swift */; };
+		CA06C0492AB962C400C63E59 /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */; };
 		CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983C2AB432A000521291 /* AppDelegate.swift */; };
 		CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983E2AB432A000521291 /* SceneDelegate.swift */; };
 		CA0898412AB432A000521291 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898402AB432A000521291 /* LoginViewController.swift */; };
@@ -51,7 +54,10 @@
 		1040C8902AB848DD00968E7A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1040C8922AB84C6700968E7A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		CA06C03F2AB85CD600C63E59 /* UIComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIComponent.swift; path = SDUSampleApp/UIComponent.swift; sourceTree = SOURCE_ROOT; };
+		CA06C0422AB9617A00C63E59 /* ScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
+		CA06C0442AB961D700C63E59 /* TextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBuilder.swift; sourceTree = "<group>"; };
+		CA06C0462AB9627F00C63E59 /* LabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBuilder.swift; sourceTree = "<group>"; };
+		CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
 		CA0898392AB432A000521291 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08983C2AB432A000521291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA08983E2AB432A000521291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +105,6 @@
 		1040C88B2AB844D400968E7A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CA06C03F2AB85CD600C63E59 /* UIComponent.swift */,
 				1040C88C2AB845A200968E7A /* CustomLabel.swift */,
 				1040C88E2AB848D000968E7A /* CustomButton.swift */,
 				1040C8902AB848DD00968E7A /* CustomTextField.swift */,
@@ -114,6 +119,25 @@
 				CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA06C0412AB9614D00C63E59 /* ComponentBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				CA06C0422AB9617A00C63E59 /* ScreenBuilder.swift */,
+				CA06C0442AB961D700C63E59 /* TextFieldBuilder.swift */,
+				CA06C0462AB9627F00C63E59 /* LabelBuilder.swift */,
+				CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */,
+			);
+			path = ComponentBuilder;
+			sourceTree = "<group>";
+		};
+		CA06C04A2AB963F800C63E59 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA0898402AB432A000521291 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		CA0898302AB432A000521291 = {
@@ -139,14 +163,15 @@
 		CA08983B2AB432A000521291 /* SDUSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA06C0412AB9614D00C63E59 /* ComponentBuilder */,
 				1040C88B2AB844D400968E7A /* Components */,
-				CA06C0292AB8144C00C63E59 /* ViewModel */,
-				CA0898722AB4818600521291 /* Service */,
 				CA08986F2AB45BB900521291 /* UIModels */,
+				CA06C0292AB8144C00C63E59 /* ViewModel */,
+				CA06C04A2AB963F800C63E59 /* ViewControllers */,
+				CA0898722AB4818600521291 /* Service */,
 				CA08986C2AB4346200521291 /* Resources */,
 				CA08983E2AB432A000521291 /* SceneDelegate.swift */,
 				CA08983C2AB432A000521291 /* AppDelegate.swift */,
-				CA0898402AB432A000521291 /* LoginViewController.swift */,
 				CA0898422AB432A000521291 /* Main.storyboard */,
 				CA0898452AB432A300521291 /* Assets.xcassets */,
 				CA0898472AB432A300521291 /* LaunchScreen.storyboard */,
@@ -330,7 +355,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0898742AB481AF00521291 /* NetworkServiceProtocol.swift in Sources */,
-				CA06C0402AB85CD600C63E59 /* UIComponent.swift in Sources */,
+				CA06C0492AB962C400C63E59 /* ButtonBuilder.swift in Sources */,
+				CA06C0472AB9627F00C63E59 /* LabelBuilder.swift in Sources */,
+				CA06C0452AB961D800C63E59 /* TextFieldBuilder.swift in Sources */,
+				CA06C0432AB9617A00C63E59 /* ScreenBuilder.swift in Sources */,
 				CA0898412AB432A000521291 /* LoginViewController.swift in Sources */,
 				1040C88F2AB848D000968E7A /* CustomButton.swift in Sources */,
 				CA0898712AB4751700521291 /* ScreenModel.swift in Sources */,
