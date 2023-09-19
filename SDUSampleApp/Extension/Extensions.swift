@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // MARK :- 
-extension UIView {
+extension UIViewController {
     func genrateUIView(padding:Padding?, viewG:UIView) -> UIView {
         let tempView = UIView(frame: .zero)
         tempView.clipsToBounds = true
