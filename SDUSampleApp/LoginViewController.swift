@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
         viewModel = LoginViewModel(service: LocalService())
         viewModel.load { [weak self] success in
             for view in self?.viewModel.components ?? [] {
+                
                 self?.contentView.addArrangedSubview(view)
             }
         }

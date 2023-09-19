@@ -58,13 +58,17 @@ extension ScreenModel {
         for element in self.elements ?? [] {
             switch element.type {
             case .label:
-                components.append(CustomLabel(attributes: LabelConfigration(textColor: UIColor.red, font: UIFont.systemFont(ofSize: CGFloat(element.style.fontSize ?? 16)))))
-                debugPrint("Test")
-
+                let configuration = LabelConfigration(text: element.text, textColor: .black, font: UIFont.systemFont(ofSize: CGFloat(element.style.fontSize ?? 16)))
+                let label = CustomLabel(attributes: configuration)
+                components.append(label)
             case .textInput:
-                debugPrint("Test")
+                let configuration = TextFieldConfigration(backgroundColor: .red, textColor: .black, font: UIFont.systemFont(ofSize: CGFloat(element.style.fontSize ?? 16)), placeholder: element.placeholder)
+                let textField = CustomTextField(attributes: configuration)
+                components.append(textField)
             case .button:
-                debugPrint("Test")
+                let configuration = ButtonConfigration(backgroundColor: .black, titleColor: .white, titleFont: UIFont.systemFont(ofSize: CGFloat(element.style.fontSize ?? 16)), cornorRadius: 12)
+                let button = CustomButton(attributes: configuration)
+                components.append(button)
             case .none:
                 debugPrint("Test")
 

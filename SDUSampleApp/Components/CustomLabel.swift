@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol LabelConfigurable {
+    var text: String? { get }
     var textColor:UIColor { get }
     var font: UIFont { get }
     // Add more as requirements
@@ -31,12 +32,14 @@ class CustomLabel: UILabel {
     private func setupUI(_ attributes:LabelConfigurable) {
         self.textColor = attributes.textColor
         self.font = attributes.font
-        self.text = "hello"
+        self.text = attributes.text
     }
 }
 
 struct LabelConfigration: LabelConfigurable {
+    var text: String?
     var textColor: UIColor
     var font: UIFont
+    
 }
 

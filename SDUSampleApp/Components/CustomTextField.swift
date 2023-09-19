@@ -12,6 +12,8 @@ protocol TextFieldConfigurable {
     var backgroundColor: UIColor { get }
     var textColor: UIColor { get }
     var font: UIFont { get }
+    var placeholder: String? { get }
+
     // Add more as requirements
 }
 
@@ -31,6 +33,7 @@ class CustomTextField: UITextField {
         self.backgroundColor = attributes.backgroundColor
         self.textColor = attributes.textColor
         self.font = attributes.font
+        self.placeholder = placeholder
     }
 }
 
@@ -38,4 +41,5 @@ struct TextFieldConfigration: TextFieldConfigurable {
     var backgroundColor: UIColor
     var textColor: UIColor
     var font: UIFont
+    var placeholder: String?
 }

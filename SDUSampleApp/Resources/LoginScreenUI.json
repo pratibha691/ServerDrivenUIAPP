@@ -5,6 +5,7 @@
     "style": {
       "color": "#333",
       "fontSize": 24,
+      
     }
   },
   "elements": [
@@ -14,7 +15,12 @@
       "style": {
         "color": "#555",
         "fontSize": 18
+      },
+      "padding" : {
+          "left" : 16,
+          "right" : 16
       }
+
     },
     {
       "type": "textInput",

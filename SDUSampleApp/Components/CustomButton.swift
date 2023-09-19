@@ -17,6 +17,7 @@ protocol ButtonConfigurable {
 }
 
 class CustomButton: UIButton {
+    
     // MARK: - Initializers
     init(attributes: ButtonConfigurable) {
         super.init(frame: .zero)
@@ -29,7 +30,7 @@ class CustomButton: UIButton {
     
     //MARK: - UpdateUI
     private func setupUI(_ attributes:ButtonConfigurable) {
-        self.backgroundColor = attributes.backgroundColor
+        //self.backgroundColor = attributes.backgroundColor
         self.setTitleColor(attributes.titleColor, for: .normal)
         self.titleLabel?.font = attributes.titleFont
         self.layer.cornerRadius = attributes.cornorRadius
