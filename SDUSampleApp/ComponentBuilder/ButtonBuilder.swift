@@ -12,10 +12,11 @@ struct ButtonBuilder: UIComponentBuilder {
     func build(element: ScreenElement) -> CustomButton {
         let fontSize = CGFloat(element.style.fontSize ?? 16)
         let configuration = ButtonConfigration(
-            backgroundColor: .black,
+            backgroundColor: .blue,
             titleColor: .white,
             titleFont: UIFont.systemFont(ofSize: fontSize),
-            cornorRadius: 12
+            cornorRadius: 12,
+            title: element.text ?? ""
         )
         return CustomButton(attributes: configuration)
     }
