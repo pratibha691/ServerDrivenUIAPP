@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol ButtonConfigurable {
+    var id: Int { get }
     var backgroundColor: UIColor { get }
     var titleColor: UIColor { get }
     var titleFont: UIFont { get }
@@ -40,6 +41,7 @@ class CustomButton: UIButton {
 }
 
 struct ButtonConfigration: ButtonConfigurable {
+    var id: Int 
     var backgroundColor: UIColor
     var titleColor: UIColor
     var titleFont: UIFont

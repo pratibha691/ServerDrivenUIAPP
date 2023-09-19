@@ -29,7 +29,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="698"/>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="HPV-6q-9Ca" secondAttribute="bottom" id="KLE-hA-1sS"/>
                                                     <constraint firstItem="HPV-6q-9Ca" firstAttribute="leading" secondItem="Ccl-wP-Upt" secondAttribute="leading" id="LqS-GE-ltg"/>
@@ -78,6 +78,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

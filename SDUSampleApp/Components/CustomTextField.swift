@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol TextFieldConfigurable {
+    var id: Int { get }
     var backgroundColor: UIColor { get }
     var textColor: UIColor { get }
     var font: UIFont { get }
@@ -33,11 +34,14 @@ class CustomTextField: UITextField {
         self.backgroundColor = attributes.backgroundColor
         self.textColor = attributes.textColor
         self.font = attributes.font
-        self.placeholder = placeholder
+        self.placeholder = attributes.placeholder
+        borderStyle = .roundedRect
+        
     }
 }
 
 struct TextFieldConfigration: TextFieldConfigurable {
+    var id: Int
     var backgroundColor: UIColor
     var textColor: UIColor
     var font: UIFont
