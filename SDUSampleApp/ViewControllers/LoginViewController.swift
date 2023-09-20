@@ -10,12 +10,11 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIStackView!
-    var viewModel: LoginViewModel!
+    var viewModel: LoginViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel = LoginViewModel(service: LocalService())
         loadData()
         
     }
