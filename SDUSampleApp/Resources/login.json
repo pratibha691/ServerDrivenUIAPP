@@ -26,8 +26,8 @@
                     "color": "#555",
                     "padding": {
                         "top": 10.0,
-                        "left": 20.0,
-                        "right": 20.0,
+                        "left": 0.0,
+                        "right": 0.0,
                         "bottom": 10.0
                     },
                     "height":40
@@ -49,8 +49,8 @@
                     "color": "#555",
                     "padding": {
                         "top": 10.0,
-                        "left": 20.0,
-                        "right": 20.0,
+                        "left": 0.0,
+                        "right": 0.0,
                         "bottom": 10.0
                     },
                     "height":40
@@ -70,9 +70,9 @@
                     "backgroundColor": "#0074cc",
                     "color": "#ffffff",
                     "padding": {
-                        "top": 10.0,
-                        "left": 20.0,
-                        "right": 20.0,
+                        "top": 50.0,
+                        "left": 0.0,
+                        "right": 0.0,
                         "bottom": 10.0
                     },
                     "height":50
@@ -93,8 +93,8 @@
                     "color": "#ffffff",
                     "padding": {
                         "top": 10.0,
-                        "left": 20.0,
-                        "right": 20.0,
+                        "left": 0.0,
+                        "right": 0.0,
                         "bottom": 10.0
                     },
                     "height":30
