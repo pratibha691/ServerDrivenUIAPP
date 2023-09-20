@@ -12,13 +12,18 @@ struct Components {
     let viewData: [Field]
     let view: [UIView]
 }
+protocol LoginViewModelProtocol {
+    func load(completion: @escaping(Bool) -> Void)
+    var components: [Components] { get }
+    var currentScreenData:ScreenModel? { get }
 
-class LoginViewModel {
+}
+class LoginViewModel: LoginViewModelProtocol {
     
     private var service: NetworkServiceProtocol
 
     var components: [Components] =  []
-    var currentScreenData: ScreenModel?
+    var currentScreenData:ScreenModel?
     
     init(service: NetworkServiceProtocol) {
         self.service = service
