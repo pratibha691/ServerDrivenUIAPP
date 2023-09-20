@@ -28,16 +28,11 @@ class LoginViewController: UIViewController {
                     if let button = someView as? CustomButton {
                         self?.handleButtonAction(button)
                     }
+                    if let textField = someView as? CustomTextField {
+                        textField.delegate = self
+                    }
                     tempView.backgroundColor = .white
                     self?.contentView.addArrangedSubview(tempView)
-                }
-                let paddingData = self?.viewModel.currentScreenData?.padding
-                if let currentView = self?.scrollContentView {
-                    self?.contentView.translatesAutoresizingMaskIntoConstraints = false
-                    self?.contentView.leadingAnchor.constraint(equalTo: currentView.leadingAnchor, constant: CGFloat(paddingData?.left ?? 16)).isActive = true
-                    self?.contentView.trailingAnchor.constraint(equalTo: currentView.trailingAnchor, constant: -CGFloat(paddingData?.right ?? 16)).isActive = true
-                    self?.contentView.bottomAnchor.constraint(greaterThanOrEqualTo: currentView.bottomAnchor, constant: -CGFloat(paddingData?.bottom ?? 16) ).isActive = false
-                    self?.contentView.topAnchor.constraint(equalTo: currentView.topAnchor, constant: CGFloat(paddingData?.top ?? 16)).isActive = true
                 }
             }
         }
@@ -48,12 +43,19 @@ extension LoginViewController {
     func handleButtonAction(_ button: CustomButton) {
         button.setButtonAction {
             switch button.identifier {
-            case .loginButton :
+            case .loginButton:
                 debugPrint("Handle login button action")
             default:
                 debugPrint("Action not handled")
                 
             }
         }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //handle
+        return true
     }
 }

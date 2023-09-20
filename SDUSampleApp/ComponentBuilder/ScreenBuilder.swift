@@ -15,8 +15,6 @@ protocol UIComponentBuilder {
 
 class ScreenBuilder {
     private let elements: [Field]
-    //weak var buttonActionDelegate: ButtonActionDelegate?
-   // weak var textFieldActionDelegate: TextFieldActionDelegate?
 
     init(elements: [Field]) {
         self.elements = elements
