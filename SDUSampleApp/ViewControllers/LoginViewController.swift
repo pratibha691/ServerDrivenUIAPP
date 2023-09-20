@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+    @IBOutlet weak var scrollContentView: UIView!
     @IBOutlet weak var contentView: UIStackView!
     var viewModel: LoginViewModelProtocol!
     
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
                     self?.contentView.addArrangedSubview(tempView)
                 }
                 let paddingData = self?.viewModel.currentScreenData?.padding
-                if let currentView = self?.view {
+                if let currentView = self?.scrollContentView {
                     self?.contentView.translatesAutoresizingMaskIntoConstraints = false
                     self?.contentView.leadingAnchor.constraint(equalTo: currentView.leadingAnchor, constant: CGFloat(paddingData?.left ?? 16)).isActive = true
                     self?.contentView.trailingAnchor.constraint(equalTo: currentView.trailingAnchor, constant: -CGFloat(paddingData?.right ?? 16)).isActive = true
