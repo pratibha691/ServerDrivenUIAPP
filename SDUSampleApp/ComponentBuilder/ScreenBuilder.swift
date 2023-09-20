@@ -10,18 +10,18 @@ import UIKit
 
 protocol UIComponentBuilder {
     associatedtype ComponentType
-    func build(element: ScreenElement) -> ComponentType
+    func build(element: Field) -> ComponentType
 }
 
 class ScreenBuilder {
-    private let elements: [ScreenElement]
+    private let elements: [Field]
     weak var buttonActionDelegate: ButtonActionDelegate?
-    weak var textFieldactionDelegate: TextFieldActionDelegate?
+    weak var textFieldActionDelegate: TextFieldActionDelegate?
 
-    init(elements: [ScreenElement], buttonDelegate: ButtonActionDelegate?, textFieldDelegate: TextFieldActionDelegate?) {
+    init(elements: [Field], buttonDelegate: ButtonActionDelegate?, textFieldDelegate: TextFieldActionDelegate?) {
         self.elements = elements
         self.buttonActionDelegate = buttonDelegate
-        self.textFieldactionDelegate = textFieldDelegate
+        self.textFieldActionDelegate = textFieldDelegate
     }
     
     func buildUIComponents() -> [UIView] {
@@ -33,8 +33,8 @@ class ScreenBuilder {
                     let labelBuilder = LabelBuilder()
                     components.append(labelBuilder.build(element: element))
                     
-                case .textInput:
-                    let textFieldBuilder = TextFieldBuilder(delegate: textFieldactionDelegate)
+                case .textField:
+                    let textFieldBuilder = TextFieldBuilder(delegate: textFieldActionDelegate)
                     components.append(textFieldBuilder.build(element: element))
                     
                 case .button:

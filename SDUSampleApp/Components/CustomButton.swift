@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 protocol ButtonConfigurable {
-    var id: Int { get }
-    var backgroundColor: UIColor { get }
-    var titleColor: UIColor { get }
+    var identifier: String { get }
+    var backgroundColor: String { get }
+    var titleColor: String { get }
     var titleFont: UIFont { get }
     var cornorRadius: CGFloat { get }
     var title: String { get }
@@ -37,9 +37,8 @@ class CustomButton: UIButton {
     
     //MARK: - UpdateUI
     private func setupUI(_ attributes:ButtonConfigurable) {
-        tag = attributes.id
-        self.backgroundColor = attributes.backgroundColor
-        self.setTitleColor(attributes.titleColor, for: .normal)
+        self.backgroundColor = UIColor(hex: attributes.backgroundColor)
+        self.setTitleColor(UIColor(hex: attributes.backgroundColor), for: .normal)
         self.titleLabel?.font = attributes.titleFont
         self.layer.cornerRadius = attributes.cornorRadius
         setTitle(attributes.title, for: .normal)
@@ -63,9 +62,9 @@ class CustomButton: UIButton {
 }
 
 struct ButtonConfigration: ButtonConfigurable {
-    var id: Int
-    var backgroundColor: UIColor
-    var titleColor: UIColor
+    var identifier: String
+    var backgroundColor: String
+    var titleColor: String
     var titleFont: UIFont
     var cornorRadius: CGFloat
     var title: String

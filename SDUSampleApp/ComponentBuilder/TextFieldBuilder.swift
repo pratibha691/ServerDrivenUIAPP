@@ -20,13 +20,13 @@ struct TextFieldBuilder: UIComponentBuilder {
         self.textFieldActionDelegate = delegate
     }
     
-    func build(element: ScreenElement) -> CustomTextField {
-        let fontSize = CGFloat(element.style.fontSize ?? 16)
-        let configuration = TextFieldConfigration(id: element.id,
-            backgroundColor: UIColor(hex: element.style.backgroundColor),
-            textColor: UIColor(hex: element.style.color),
+    func build(element: Field) -> CustomTextField {
+        let fontSize = CGFloat(16)
+        let configuration = TextFieldConfigration(identifier: element.identifier ?? "",
+            backgroundColor: UIColor(hex: element.properties?.backgroundColor ?? ""),
+            textColor: UIColor(hex: element.properties?.color ?? ""),
             font: UIFont.systemFont(ofSize: fontSize),
-            placeholder: element.placeholder
+                                                  placeholder: element.properties?.placeHolder ?? ""
         )
         let customTextField = CustomTextField(attributes: configuration)
         customTextField.setTextFieldAction { stringValue in

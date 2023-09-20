@@ -21,19 +21,19 @@ struct ButtonBuilder: UIComponentBuilder {
     init(delegate: ButtonActionDelegate?) {
         self.buttonActionDelegate = delegate
     }
-    func build(element: ScreenElement) -> CustomButton {
-        let fontSize = CGFloat(element.style.fontSize ?? 16)
-        let configuration = ButtonConfigration(id: element.id,
-                                               backgroundColor: .blue,
-                                               titleColor: UIColor(hex: element.style.color),
+    func build(element: Field) -> CustomButton {
+        let fontSize = CGFloat(16)
+        let configuration = ButtonConfigration(identifier: element.identifier ?? "",
+                                               backgroundColor: element.properties?.backgroundColor ?? "000000",
+                                               titleColor: element.properties?.color ?? "000000",
                                                titleFont: UIFont.systemFont(ofSize: fontSize),
                                                cornorRadius: 12,
-                                               title: element.text ?? "",
-                                               action: element.action ?? ""
+                                               title: element.properties?.title ?? "",
+                                               action: element.properties?.action?.type ?? ""
         )
         let customButton = CustomButton(attributes: configuration)
         customButton.setButtonAction {
-            if let action = element.action {
+            if let action = element.properties?.action?.type {
                 self.buttonActionDelegate?.handleButtonAction(ButtonAction(rawValue: action) ?? .login)
             } else {
                 debugPrint("Action not provided")

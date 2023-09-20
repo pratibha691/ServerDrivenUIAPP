@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Components {
-    let viewData: [ScreenElement]
+    let viewData: [Field]
     let view: [UIView]
 }
 
@@ -20,6 +20,7 @@ class LoginViewModel {
     weak var textFieldDelegate: TextFieldActionDelegate?
 
     var components: [Components] =  []
+    var currentScreenData:OnBoardingModel?
     
     init(service: NetworkServiceProtocol, buttonDelegate: ButtonActionDelegate?, textFieldDelegate: TextFieldActionDelegate?) {
         self.service = service
@@ -29,11 +30,12 @@ class LoginViewModel {
     
     func load(completion: @escaping(Bool) -> Void)  {
         
-        service.load("LoginScreenUI") { [weak self](result: Result<ScreenModel, Error>) in
+        service.load("onboarding") { [weak self](result: Result<OnBoardingModel, Error>) in
             switch result {
             case .success(let screenModel):
-                let screenBuilder = ScreenBuilder(elements: screenModel.elements ?? [], buttonDelegate: self?.buttonDelegate, textFieldDelegate: self?.textFieldDelegate)
-                self?.components = [Components(viewData: screenModel.elements ?? [], view: screenBuilder.buildUIComponents())]
+                self?.currentScreenData = screenModel
+                let screenBuilder = ScreenBuilder(elements: screenModel.body?.fields ?? [], buttonDelegate: self?.buttonDelegate, textFieldDelegate: self?.textFieldDelegate)
+                self?.components = [Components(viewData: screenModel.body?.fields ?? [], view: screenBuilder.buildUIComponents())]
                 // Handle the successfully loaded and decoded `ScreenModel`.
                 // Example: update your UI with the loaded data.
                 completion(true)

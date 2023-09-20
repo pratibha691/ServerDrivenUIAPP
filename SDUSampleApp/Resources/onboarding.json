@@ -1,0 +1,170 @@
+{
+    "screen_identifier": "onboarding_screen",
+    "padding": {
+        "top": 20.0,
+        "left": 20.0,
+        "right": 20.0,
+        "bottom": 20.0
+    },
+    "body": {
+        "type": "column",
+        "identifier": "onboarding_body",
+        "fields": [
+            {
+                "type": "textField",
+                "identifier": "first_name_text_field",
+                "properties": {
+                    "label": "First Name",
+                    "placeHolder": "First name",
+                    "mandatory": true,
+                    "accessibility": {
+                        "label": "Enter first name",
+                        "identifier": "first_name_text_field"
+                    },
+                    "allowed_regex": "^[a-zA-Z]{3,18}$",
+                    "textFieldType": "plain_text",
+                    "validation": {
+                        "max": {
+                            "value": 18,
+                            "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
+                        },
+                        "min": {
+                            "value": 3,
+                            "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
+                        },
+                        "regex": "^[a-zA-Z]{3,18}$"
+                    },
+                    "backgroundColor": "#f0f0f0",
+                    "color": "#555"
+                }
+            },
+            {
+                "type": "textField",
+                "identifier": "middle_name_text_field",
+                "properties": {
+                    "label": "Middle Name",
+                    "placeHolder": "Middle name",
+                    "mandatory": false,
+                    "accessibility": {
+                        "label": "Enter middle name",
+                        "identifier": "middle_name_text_field"
+                    },
+                    "allowed_regex": "^[a-zA-Z]{3,18}$",
+                    "textFieldType": "plain_text",
+                    "validation": {
+                        "max": {
+                            "value": 18,
+                            "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
+                        },
+                        "min": {
+                            "value": 3,
+                            "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
+                        },
+                        "regex": "^[a-zA-Z]{3,18}$"
+                    },
+                    "backgroundColor": "#f0f0f0",
+                    "color": "#555"
+                }
+            },
+            {
+                "type": "textField",
+                "identifier": "last_name_text_field",
+                "properties": {
+                    "label": "Last Name",
+                    "placeHolder": "Last name",
+                    "mandatory": true,
+                    "accessibility": {
+                        "label": "Enter last name",
+                        "identifier": "last_name_text_field"
+                    },
+                    "allowed_regex": "^[a-zA-Z]{3,18}$",
+                    "textFieldType": "plain_text",
+                    "validation": {
+                        "max": {
+                            "value": 18,
+                            "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
+                        },
+                        "min": {
+                            "value": 3,
+                            "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
+                        },
+                        "regex": "^[a-zA-Z]{3,18}$"
+                    },
+                    "backgroundColor": "#f0f0f0",
+                    "color": "#555",
+                }
+            },
+            {
+                "type": "textField",
+                "identifier": "email_text_field",
+                "properties": {
+                    "label": "Email",
+                    "placeHolder": "Email",
+                    "mandatory": true,
+                    "accessibility": {
+                        "label": "Enter email",
+                        "identifier": "email_text_field"
+                    },
+                    "allowed_regex": "r^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                    "textFieldType": "plain_text",
+                    "validation": {
+                        "max": {
+                            "value": 18,
+                            "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
+                        },
+                        "min": {
+                            "value": 3,
+                            "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
+                        },
+                        "regex": "r^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+                    },
+                    "backgroundColor": "#f0f0f0",
+                    "color": "#555"
+                }
+            },
+            {
+                "type": "textField",
+                "identifier": "mobile_number_text_field",
+                "properties": {
+                    "label": "Mobile Number",
+                    "placeHolder": "Mobile number",
+                    "mandatory": true,
+                    "accessibility": {
+                        "label": "Enter mobile number",
+                        "identifier": "mobile_number_text_field"
+                    },
+                    "allowed_regex": "^[0-9]{10,15}$",
+                    "textFieldType": "plain_text",
+                    "validation": {
+                        "max": {
+                            "value": 15,
+                            "message": "Mobile number cannot exceed 15 characters in length."
+                        },
+                        "min": {
+                            "value": 10,
+                            "message": "Mobile number must be at least 10 characters long."
+                        },
+                        "regex": "^[0-9]{10,15}$"
+                    },
+                    "backgroundColor": "#f0f0f0",
+                    "color": "#555"
+                }
+            },
+            {
+                "identifier": "submit_button",
+                "type": "button",
+                "properties": {
+                    "title": "Submit",
+                    "url": "<API URL TO SUBMIT>",
+                    "action": {
+                        "type": "submit",
+                        "destination": "<DESTINATION_SCREEN_ROUTE_IDENTIFIER>",
+                        "navigationType": "PUSH"
+                    },
+                    "backgroundColor": "#0074cc",
+                    "color": "#555"
+                }
+            }
+        ]
+    }
+}

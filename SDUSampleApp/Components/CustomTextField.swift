@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol TextFieldConfigurable {
-    var id: Int { get }
+    var identifier: String { get }
     var backgroundColor: UIColor { get }
     var textColor: UIColor { get }
     var font: UIFont { get }
@@ -62,7 +62,7 @@ extension CustomTextField: UITextFieldDelegate {
 }
 
 struct TextFieldConfigration: TextFieldConfigurable {
-    var id: Int
+    var identifier: String
     var backgroundColor: UIColor
     var textColor: UIColor
     var font: UIFont
