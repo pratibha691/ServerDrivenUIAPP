@@ -11,7 +11,7 @@ import UIKit
 struct LabelBuilder: UIComponentBuilder {
     func build(element: Field) -> CustomLabel {
         let fontSize = CGFloat(16)
-        let configuration = LabelConfigration(identifier: element.identifier ?? "",
+        let configuration = LabelConfigration(identifier: element.identifier,
                                               text: element.properties?.label ?? "",
                                               textColor: UIColor(hex: element.properties?.color ?? "000000"),
                                               font: UIFont.systemFont(ofSize: fontSize)

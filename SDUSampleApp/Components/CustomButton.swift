@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ButtonConfigurable {
-    var identifier: String { get }
+    var identifier: ComponentIdentifier { get }
     var backgroundColor: String { get }
     var titleColor: String { get }
     var titleFont: UIFont { get }
@@ -21,7 +21,7 @@ protocol ButtonConfigurable {
 class CustomButton: UIButton {
     // MARK: - Properties
     private var buttonAction: (() -> Void)?
-    var identifier: String
+    var identifier: ComponentIdentifier
     
     // MARK: - Initializers
     // MARK: - Initializers
@@ -32,7 +32,7 @@ class CustomButton: UIButton {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.identifier = ""
+        self.identifier = .none
         super.init(coder: aDecoder)
     }
     
@@ -58,7 +58,7 @@ class CustomButton: UIButton {
 }
 
 struct ButtonConfigration: ButtonConfigurable {
-    var identifier: String
+    var identifier: ComponentIdentifier
     var backgroundColor: String
     var titleColor: String
     var titleFont: UIFont

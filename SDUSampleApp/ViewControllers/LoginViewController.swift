@@ -22,13 +22,23 @@ class LoginViewController: UIViewController {
     private func loadData() {
         viewModel.load { [weak self] success in
             if let dataV = self?.viewModel.components.first {
-                for someView in dataV.view {
-                    let tempView = self?.genrateUIView(padding: self?.viewModel?.currentScreenData?.padding, viewG: someView) ?? UIView()
+                for index in dataV.view.indices {
+                    let dataValue = dataV.viewData[index]
+                    let someView = dataV.view[index]
+                    let tempView = self?.genrateUIView(padding: dataValue.properties?.padding, viewG: someView) ?? UIView()
                     if let button = someView as? CustomButton {
                         self?.handleButtonAction(button)
                     }
                     tempView.backgroundColor = .white
                     self?.contentView.addArrangedSubview(tempView)
+                }
+                let paddingData = self?.viewModel.currentScreenData?.padding
+                if let currentView = self?.view {
+                    self?.contentView.translatesAutoresizingMaskIntoConstraints = false
+                    self?.contentView.leadingAnchor.constraint(equalTo: currentView.leadingAnchor, constant: CGFloat(paddingData?.left ?? 16)).isActive = true
+                    self?.contentView.trailingAnchor.constraint(equalTo: currentView.trailingAnchor, constant: -CGFloat(paddingData?.right ?? 16)).isActive = true
+                    self?.contentView.bottomAnchor.constraint(greaterThanOrEqualTo: currentView.bottomAnchor, constant: -CGFloat(paddingData?.bottom ?? 16) ).isActive = false
+                    self?.contentView.topAnchor.constraint(equalTo: currentView.topAnchor, constant: CGFloat(paddingData?.top ?? 16)).isActive = true
                 }
             }
         }
@@ -39,7 +49,7 @@ extension LoginViewController {
     func handleButtonAction(_ button: CustomButton) {
         button.setButtonAction {
             switch button.identifier {
-            case "login_button" :
+            case .loginButton :
                 debugPrint("Handle login button action")
             default:
                 debugPrint("Action not handled")

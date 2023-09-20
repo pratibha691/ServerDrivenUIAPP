@@ -20,7 +20,7 @@ struct ButtonBuilder: UIComponentBuilder {
   
     func build(element: Field) -> CustomButton {
         let fontSize = CGFloat(16)
-        let configuration = ButtonConfigration(identifier: element.identifier ?? "",
+        let configuration = ButtonConfigration(identifier: element.identifier,
                                                backgroundColor: element.properties?.backgroundColor ?? "000000",
                                                titleColor: element.properties?.color ?? "000000",
                                                titleFont: UIFont.systemFont(ofSize: fontSize),

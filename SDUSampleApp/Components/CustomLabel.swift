@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol LabelConfigurable {
-    var identifier: String { get }
+    var identifier: ComponentIdentifier { get }
     var text: String? { get }
     var textColor: UIColor { get }
     var font: UIFont { get }
@@ -38,7 +38,7 @@ class CustomLabel: UILabel {
 }
 
 struct LabelConfigration: LabelConfigurable {
-    var identifier: String
+    var identifier: ComponentIdentifier
     var text: String?
     var textColor: UIColor
     var font: UIFont

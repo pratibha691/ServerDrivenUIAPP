@@ -31,7 +31,7 @@ struct Padding: Decodable {
 // MARK: - Field
 struct Field: Decodable {
     var type:ComponentsType?
-    var identifier: String?
+    var identifier: ComponentIdentifier
     var properties: Properties?
 }
 
@@ -42,7 +42,7 @@ enum ComponentsType: String, Decodable {
 }
 
 // MARK: - Properties
-struct Properties: Codable {
+struct Properties: Decodable {
     var label, placeHolder: String?
     var mandatory: Bool?
     var accessibility: Accessibility?
@@ -52,6 +52,8 @@ struct Properties: Codable {
     var action: Action?
     var color:String?
     var backgroundColor: String?
+    var padding:Padding?
+    var height:Int?
     
     enum CodingKeys: String, CodingKey {
         case label, placeHolder, mandatory, accessibility
@@ -59,27 +61,29 @@ struct Properties: Codable {
         case textFieldType, validation, title, url, action
         case color
         case backgroundColor
+        case padding
+        case height
     }
 }
 
 // MARK: - Accessibility
-struct Accessibility: Codable {
+struct Accessibility: Decodable {
     var label, identifier: String?
 }
 
 // MARK: - Action
-struct Action: Codable {
+struct Action: Decodable {
     var type, destination, navigationType: String?
 }
 
 // MARK: - Validation
-struct Validation: Codable {
+struct Validation: Decodable {
     var max, min: Max?
     var regex: String?
 }
 
 // MARK: - Max
-struct Max: Codable {
+struct Max: Decodable {
     var value: Int?
     var message: String?
 }

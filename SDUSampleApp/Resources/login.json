@@ -1,7 +1,7 @@
 {
     "screen_identifier": "login",
     "padding": {
-        "top": 20.0,
+        "top": 100.0,
         "left": 20.0,
         "right": 20.0,
         "bottom": 20.0
@@ -24,7 +24,13 @@
                     "textFieldType": "plain_text",
                     "backgroundColor": "#f0f0f0",
                     "color": "#555",
-                    
+                    "padding": {
+                        "top": 10.0,
+                        "left": 20.0,
+                        "right": 20.0,
+                        "bottom": 10.0
+                    },
+                    "height":40
                 }
             },
             {
@@ -40,7 +46,14 @@
                     },
                     "textFieldType": "secure_text",
                     "backgroundColor": "#f0f0f0",
-                    "color": "#555"
+                    "color": "#555",
+                    "padding": {
+                        "top": 10.0,
+                        "left": 20.0,
+                        "right": 20.0,
+                        "bottom": 10.0
+                    },
+                    "height":40
                 }
             },
             {
@@ -55,7 +68,14 @@
                         "navigationType": "PUSH"
                     },
                     "backgroundColor": "#0074cc",
-                    "color": "#ffffff"
+                    "color": "#ffffff",
+                    "padding": {
+                        "top": 10.0,
+                        "left": 20.0,
+                        "right": 20.0,
+                        "bottom": 10.0
+                    },
+                    "height":50
                 }
             },
             {
@@ -70,7 +90,14 @@
                         "navigationType": "PUSH"
                     },
                     "backgroundColor": "",
-                    "color": "#ffffff"
+                    "color": "#ffffff",
+                    "padding": {
+                        "top": 10.0,
+                        "left": 20.0,
+                        "right": 20.0,
+                        "bottom": 10.0
+                    },
+                    "height":30
                 }
             }
         ]
