@@ -23,7 +23,8 @@
                     },
                     "textFieldType": "plain_text",
                     "backgroundColor": "#f0f0f0",
-                    "color": "#555"
+                    "color": "#555",
+                    
                 }
             },
             {

@@ -12,14 +12,14 @@
 		1040C8912AB848DD00968E7A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040C8902AB848DD00968E7A /* CustomTextField.swift */; };
 		1040C8932AB84C6700968E7A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040C8922AB84C6700968E7A /* Extensions.swift */; };
 		10B036C22ABADC03000CD13F /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = 10B036C12ABADC03000CD13F /* onboarding.json */; };
-		10B036C42ABADE0D000CD13F /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B036C32ABADE0D000CD13F /* OnBoardingModel.swift */; };
+		10B036C42ABADE0D000CD13F /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B036C32ABADE0D000CD13F /* ScreenModel.swift */; };
 		CA06C0382AB841CF00C63E59 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */; };
 		CA06C0432AB9617A00C63E59 /* ScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0422AB9617A00C63E59 /* ScreenBuilder.swift */; };
 		CA06C0452AB961D800C63E59 /* TextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0442AB961D700C63E59 /* TextFieldBuilder.swift */; };
 		CA06C0472AB9627F00C63E59 /* LabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0462AB9627F00C63E59 /* LabelBuilder.swift */; };
 		CA06C0492AB962C400C63E59 /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */; };
 		CA06C04D2AB9827500C63E59 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C04C2AB9827500C63E59 /* UIColorExtension.swift */; };
-		CA06C0522ABAF24000C63E59 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0512ABAF24000C63E59 /* File.swift */; };
+		CA06C0522ABAF24000C63E59 /* ComponentIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0512ABAF24000C63E59 /* ComponentIdentifier.swift */; };
 		CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983C2AB432A000521291 /* AppDelegate.swift */; };
 		CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983E2AB432A000521291 /* SceneDelegate.swift */; };
 		CA0898412AB432A000521291 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898402AB432A000521291 /* LoginViewController.swift */; };
@@ -30,7 +30,6 @@
 		CA08985E2AB432A300521291 /* SDUSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08985D2AB432A300521291 /* SDUSampleAppUITests.swift */; };
 		CA0898602AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08985F2AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift */; };
 		CA08986E2AB434AD00521291 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = CA08986D2AB434AD00521291 /* login.json */; };
-		CA0898712AB4751700521291 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898702AB4751700521291 /* ScreenModel.swift */; };
 		CA0898742AB481AF00521291 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898732AB481AF00521291 /* NetworkServiceProtocol.swift */; };
 		CA0898762AB481FB00521291 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898752AB481FB00521291 /* LocalService.swift */; };
 /* End PBXBuildFile section */
@@ -58,14 +57,14 @@
 		1040C8902AB848DD00968E7A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1040C8922AB84C6700968E7A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		10B036C12ABADC03000CD13F /* onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
-		10B036C32ABADE0D000CD13F /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		10B036C32ABADE0D000CD13F /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		CA06C0372AB841CF00C63E59 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CA06C0422AB9617A00C63E59 /* ScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
 		CA06C0442AB961D700C63E59 /* TextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBuilder.swift; sourceTree = "<group>"; };
 		CA06C0462AB9627F00C63E59 /* LabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBuilder.swift; sourceTree = "<group>"; };
 		CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
 		CA06C04C2AB9827500C63E59 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		CA06C0512ABAF24000C63E59 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		CA06C0512ABAF24000C63E59 /* ComponentIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentIdentifier.swift; sourceTree = "<group>"; };
 		CA0898392AB432A000521291 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08983C2AB432A000521291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA08983E2AB432A000521291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 		CA08985D2AB432A300521291 /* SDUSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppUITests.swift; sourceTree = "<group>"; };
 		CA08985F2AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA08986D2AB434AD00521291 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
-		CA0898702AB4751700521291 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		CA0898732AB481AF00521291 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		CA0898752AB481FB00521291 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,9 +232,8 @@
 		CA08986F2AB45BB900521291 /* UIModels */ = {
 			isa = PBXGroup;
 			children = (
-				CA0898702AB4751700521291 /* ScreenModel.swift */,
-				10B036C32ABADE0D000CD13F /* OnBoardingModel.swift */,
-				CA06C0512ABAF24000C63E59 /* File.swift */,
+				10B036C32ABADE0D000CD13F /* ScreenModel.swift */,
+				CA06C0512ABAF24000C63E59 /* ComponentIdentifier.swift */,
 			);
 			path = UIModels;
 			sourceTree = "<group>";
@@ -384,16 +381,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0898742AB481AF00521291 /* NetworkServiceProtocol.swift in Sources */,
-				10B036C42ABADE0D000CD13F /* OnBoardingModel.swift in Sources */,
+				10B036C42ABADE0D000CD13F /* ScreenModel.swift in Sources */,
 				CA06C0492AB962C400C63E59 /* ButtonBuilder.swift in Sources */,
 				CA06C0472AB9627F00C63E59 /* LabelBuilder.swift in Sources */,
 				CA06C0452AB961D800C63E59 /* TextFieldBuilder.swift in Sources */,
 				CA06C04D2AB9827500C63E59 /* UIColorExtension.swift in Sources */,
 				CA06C0432AB9617A00C63E59 /* ScreenBuilder.swift in Sources */,
-				CA06C0522ABAF24000C63E59 /* File.swift in Sources */,
+				CA06C0522ABAF24000C63E59 /* ComponentIdentifier.swift in Sources */,
 				CA0898412AB432A000521291 /* LoginViewController.swift in Sources */,
 				1040C88F2AB848D000968E7A /* CustomButton.swift in Sources */,
-				CA0898712AB4751700521291 /* ScreenModel.swift in Sources */,
 				1040C8912AB848DD00968E7A /* CustomTextField.swift in Sources */,
 				CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */,
 				CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */,

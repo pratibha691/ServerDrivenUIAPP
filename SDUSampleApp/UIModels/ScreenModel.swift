@@ -1,64 +1,85 @@
 //
-//  ScreenModel.swift
+//  OnBoardingModel.swift
 //  SDUSampleApp
 //
-//  Created by Pratibha Gupta on 15/09/23.
+//  Created by Pawan Sharma on 20/09/23.
 //
 
 import Foundation
-import UIKit
 // MARK: - ScreenModel
 struct ScreenModel: Decodable {
-    let screen: String?
-    let title: ScreenTitle?
-    let elements: [ScreenElement]?
-}
-
-// MARK: - Element
-struct ScreenElement: Decodable {
-    let id: Int
-    let type: ComponentType?
-    let text: String?
-    let style: ScreenElementStyle
-    let placeholder, key: String?
-    let secure: Bool?
-    let action: String?
-    let padding: Padding?
-    let identifier: String?
-}
-
-enum ComponentType: String, Decodable {
-    case label
-    case textInput
-    case button
-}
-
-// MARK: - Padding
-struct Padding: Decodable {
-    let paddingLeft, paddingRight, top, bottom: Int
+    var screenIdentifier: String?
+    var padding: Padding?
+    var body: Body?
 
     enum CodingKeys: String, CodingKey {
-        case paddingLeft = "left"
-        case paddingRight = "right"
-        case top, bottom
+        case screenIdentifier = "screen_identifier"
+        case padding, body
     }
 }
 
-// MARK: - ElementStyle
-struct ScreenElementStyle: Decodable {
-    let color: String?
-    let fontSize: Int?
-    let backgroundColor: String?
+// MARK: - Body
+struct Body: Decodable {
+    var type, identifier: String?
+    var fields: [Field]?
 }
 
-// MARK: - Title
-struct ScreenTitle: Decodable {
-    let text: String?
-    let style: ScreenTitleStyle
+struct Padding: Decodable {
+    var left, right, top, bottom: Int?
 }
 
-// MARK: - TitleStyle
-struct ScreenTitleStyle: Decodable {
-    let color: String?
-    let fontSize: Int?
+// MARK: - Field
+struct Field: Decodable {
+    var type:ComponentsType?
+    var identifier: String?
+    var properties: Properties?
+}
+
+enum ComponentsType: String, Decodable {
+    case textField
+    case button
+    case label
+}
+
+// MARK: - Properties
+struct Properties: Codable {
+    var label, placeHolder: String?
+    var mandatory: Bool?
+    var accessibility: Accessibility?
+    var allowedRegex, textFieldType: String?
+    var validation: Validation?
+    var title, url: String?
+    var action: Action?
+    var color:String?
+    var backgroundColor: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case label, placeHolder, mandatory, accessibility
+        case allowedRegex = "allowed_regex"
+        case textFieldType, validation, title, url, action
+        case color
+        case backgroundColor
+    }
+}
+
+// MARK: - Accessibility
+struct Accessibility: Codable {
+    var label, identifier: String?
+}
+
+// MARK: - Action
+struct Action: Codable {
+    var type, destination, navigationType: String?
+}
+
+// MARK: - Validation
+struct Validation: Codable {
+    var max, min: Max?
+    var regex: String?
+}
+
+// MARK: - Max
+struct Max: Codable {
+    var value: Int?
+    var message: String?
 }

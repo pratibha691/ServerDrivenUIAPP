@@ -18,7 +18,7 @@ class LoginViewModel {
     private var service: NetworkServiceProtocol
 
     var components: [Components] =  []
-    var currentScreenData:OnBoardingModel?
+    var currentScreenData: ScreenModel?
     
     init(service: NetworkServiceProtocol) {
         self.service = service
@@ -26,7 +26,7 @@ class LoginViewModel {
     
     func load(completion: @escaping(Bool) -> Void)  {
         
-        service.load("login") { [weak self](result: Result<OnBoardingModel, Error>) in
+        service.load("login") { [weak self](result: Result<ScreenModel, Error>) in
             switch result {
             case .success(let screenModel):
                 self?.currentScreenData = screenModel

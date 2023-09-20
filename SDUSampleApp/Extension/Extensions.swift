@@ -16,8 +16,8 @@ extension UIViewController {
         tempView.addSubview(viewG)
         //viewG.backgroundColor = .gray
         viewG.translatesAutoresizingMaskIntoConstraints = false
-        viewG.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: CGFloat(padding?.paddingLeft ?? 16)).isActive = true
-        viewG.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: -CGFloat(padding?.paddingRight ?? 16)).isActive = true
+        viewG.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: CGFloat(padding?.left ?? 16)).isActive = true
+        viewG.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: -CGFloat(padding?.right ?? 16)).isActive = true
         viewG.bottomAnchor.constraint(equalTo: tempView.bottomAnchor, constant: -CGFloat(padding?.bottom ?? 16)).isActive = true
         viewG.topAnchor.constraint(equalTo: tempView.topAnchor, constant: CGFloat(padding?.top ?? 16)).isActive = true
         
