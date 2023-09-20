@@ -28,7 +28,7 @@
 		CA0898542AB432A300521291 /* SDUSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898532AB432A300521291 /* SDUSampleAppTests.swift */; };
 		CA08985E2AB432A300521291 /* SDUSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08985D2AB432A300521291 /* SDUSampleAppUITests.swift */; };
 		CA0898602AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08985F2AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift */; };
-		CA08986E2AB434AD00521291 /* LoginScreenUI.json in Resources */ = {isa = PBXBuildFile; fileRef = CA08986D2AB434AD00521291 /* LoginScreenUI.json */; };
+		CA08986E2AB434AD00521291 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = CA08986D2AB434AD00521291 /* login.json */; };
 		CA0898712AB4751700521291 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898702AB4751700521291 /* ScreenModel.swift */; };
 		CA0898742AB481AF00521291 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898732AB481AF00521291 /* NetworkServiceProtocol.swift */; };
 		CA0898762AB481FB00521291 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898752AB481FB00521291 /* LocalService.swift */; };
@@ -77,7 +77,7 @@
 		CA0898592AB432A300521291 /* SDUSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDUSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08985D2AB432A300521291 /* SDUSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppUITests.swift; sourceTree = "<group>"; };
 		CA08985F2AB432A300521291 /* SDUSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CA08986D2AB434AD00521291 /* LoginScreenUI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginScreenUI.json; sourceTree = "<group>"; };
+		CA08986D2AB434AD00521291 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		CA0898702AB4751700521291 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		CA0898732AB481AF00521291 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		CA0898752AB481FB00521291 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 		CA08986C2AB4346200521291 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA08986D2AB434AD00521291 /* LoginScreenUI.json */,
+				CA08986D2AB434AD00521291 /* login.json */,
 				10B036C12ABADC03000CD13F /* onboarding.json */,
 			);
 			path = Resources;
@@ -354,7 +354,7 @@
 				CA0898492AB432A300521291 /* LaunchScreen.storyboard in Resources */,
 				CA0898462AB432A300521291 /* Assets.xcassets in Resources */,
 				CA0898442AB432A000521291 /* Main.storyboard in Resources */,
-				CA08986E2AB434AD00521291 /* LoginScreenUI.json in Resources */,
+				CA08986E2AB434AD00521291 /* login.json in Resources */,
 				10B036C22ABADC03000CD13F /* onboarding.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

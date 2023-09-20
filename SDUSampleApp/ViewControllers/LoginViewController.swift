@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
         viewModel.load { [weak self] success in
             if let dataV = self?.viewModel.components.first {
                 for someView in dataV.view {
-//                    let dataToShow = dataV.viewData.first(where: {$0.id == someView.tag})
                     let tempView = self?.genrateUIView(padding: self?.viewModel?.currentScreenData?.padding, viewG: someView) ?? UIView()
                     tempView.backgroundColor = .white
                     self?.contentView.addArrangedSubview(tempView)

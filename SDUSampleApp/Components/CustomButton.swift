@@ -38,7 +38,7 @@ class CustomButton: UIButton {
     //MARK: - UpdateUI
     private func setupUI(_ attributes:ButtonConfigurable) {
         self.backgroundColor = UIColor(hex: attributes.backgroundColor)
-        self.setTitleColor(UIColor(hex: attributes.backgroundColor), for: .normal)
+        self.setTitleColor(UIColor(hex: attributes.titleColor), for: .normal)
         self.titleLabel?.font = attributes.titleFont
         self.layer.cornerRadius = attributes.cornorRadius
         setTitle(attributes.title, for: .normal)

@@ -30,7 +30,7 @@ class LoginViewModel {
     
     func load(completion: @escaping(Bool) -> Void)  {
         
-        service.load("onboarding") { [weak self](result: Result<OnBoardingModel, Error>) in
+        service.load("login") { [weak self](result: Result<OnBoardingModel, Error>) in
             switch result {
             case .success(let screenModel):
                 self?.currentScreenData = screenModel

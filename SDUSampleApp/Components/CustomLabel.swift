@@ -11,7 +11,7 @@ import UIKit
 protocol LabelConfigurable {
     var identifier: String { get }
     var text: String? { get }
-    var textColor:UIColor { get }
+    var textColor: UIColor { get }
     var font: UIFont { get }
     // Add more as requirements
 }
