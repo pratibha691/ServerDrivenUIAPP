@@ -16,10 +16,12 @@ protocol UIComponentBuilder {
 class ScreenBuilder {
     private let elements: [ScreenElement]
     weak var buttonActionDelegate: ButtonActionDelegate?
-    
-    init(elements: [ScreenElement], delegate: ButtonActionDelegate?) {
+    weak var textFieldactionDelegate: TextFieldActionDelegate?
+
+    init(elements: [ScreenElement], buttonDelegate: ButtonActionDelegate?, textFieldDelegate: TextFieldActionDelegate?) {
         self.elements = elements
-        self.buttonActionDelegate = delegate
+        self.buttonActionDelegate = buttonDelegate
+        self.textFieldactionDelegate = textFieldDelegate
     }
     
     func buildUIComponents() -> [UIView] {
@@ -32,7 +34,7 @@ class ScreenBuilder {
                     components.append(labelBuilder.build(element: element))
                     
                 case .textInput:
-                    let textFieldBuilder = TextFieldBuilder()
+                    let textFieldBuilder = TextFieldBuilder(delegate: textFieldactionDelegate)
                     components.append(textFieldBuilder.build(element: element))
                     
                 case .button:

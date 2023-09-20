@@ -34,7 +34,8 @@
                 "backgroundColor": "#f0f0f0",
                 "color": "#555",
                 "fontSize": 16
-            }
+            },
+            "identifier":"Login.Email"
         },
         {
             "id":3,
@@ -46,7 +47,8 @@
                 "backgroundColor": "#f0f0f0",
                 "color": "#555",
                 "fontSize": 16
-            }
+            },
+            "identifier":"Login.Password"
         },
         {
             "id":4,

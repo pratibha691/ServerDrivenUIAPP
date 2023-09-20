@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel = LoginViewModel(service: LocalService(), delegate: self)
+        viewModel = LoginViewModel(service: LocalService(), buttonDelegate: self, textFieldDelegate: self)
         viewModel.load { [weak self] success in
             if let dataV = self?.viewModel.components.first {
                 for someView in dataV.view {
@@ -43,4 +43,20 @@ extension LoginViewController: ButtonActionDelegate {
               break
           }
       }
+}
+
+extension LoginViewController: TextFieldActionDelegate {
+    func handleTextFieldAction(_ identifier: String, value: String) {
+        switch identifier {
+        case "Login.Email":
+            debugPrint(value)
+            break
+        case "Login.Password":
+            debugPrint(value)
+            break
+        default:
+            debugPrint("no data")
+            break
+        }
+    }
 }

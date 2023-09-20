@@ -24,6 +24,7 @@ struct ScreenElement: Decodable {
     let secure: Bool?
     let action: String?
     let padding: Padding?
+    let identifier: String?
 }
 
 enum ComponentType: String, Decodable {

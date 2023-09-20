@@ -8,7 +8,17 @@
 import Foundation
 import UIKit
 
+
+protocol TextFieldActionDelegate: AnyObject {
+    func handleTextFieldAction(_ identifier: String, value:String)
+}
+
 struct TextFieldBuilder: UIComponentBuilder {
+    weak var textFieldActionDelegate: TextFieldActionDelegate?
+
+    init(delegate: TextFieldActionDelegate?) {
+        self.textFieldActionDelegate = delegate
+    }
     
     func build(element: ScreenElement) -> CustomTextField {
         let fontSize = CGFloat(element.style.fontSize ?? 16)
@@ -18,7 +28,11 @@ struct TextFieldBuilder: UIComponentBuilder {
             font: UIFont.systemFont(ofSize: fontSize),
             placeholder: element.placeholder
         )
-        return CustomTextField(attributes: configuration)
+        let customTextField = CustomTextField(attributes: configuration)
+        customTextField.setTextFieldAction { stringValue in
+            self.textFieldActionDelegate?.handleTextFieldAction(element.identifier ?? "", value: stringValue)
+        }
+        return customTextField
     }
 }
 

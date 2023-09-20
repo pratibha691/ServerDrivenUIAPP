@@ -19,10 +19,14 @@ protocol TextFieldConfigurable {
 }
 
 class CustomTextField: UITextField {
+    // MARK: - Properties
+    private var textFieldAction: ((String) -> Void)?
+    
     // MARK: - Initializers
     init(attributes: TextFieldConfigurable) {
         super.init(frame: .zero)
         self.setupUI(attributes)
+        self.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,6 +41,23 @@ class CustomTextField: UITextField {
         self.placeholder = attributes.placeholder
         borderStyle = .roundedRect
         
+    }
+    
+    // MARK: - Public Method to Set Action
+    func setTextFieldAction(_ action: @escaping (String) -> Void) {
+        textFieldAction = action
+    }
+}
+
+extension CustomTextField: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        self.textFieldAction?(string)
+        return true
     }
 }
 
