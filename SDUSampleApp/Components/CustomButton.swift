@@ -15,23 +15,24 @@ protocol ButtonConfigurable {
     var titleFont: UIFont { get }
     var cornorRadius: CGFloat { get }
     var title: String { get }
-    var action: String { get } // Add action property
     // Add more as requirements
 }
 
 class CustomButton: UIButton {
     // MARK: - Properties
     private var buttonAction: (() -> Void)?
-    
+    var identifier: String
     
     // MARK: - Initializers
+    // MARK: - Initializers
     init(attributes: ButtonConfigurable) {
+        self.identifier = attributes.identifier
         super.init(frame: .zero)
         self.setupUI(attributes)
-        self.configureAction(attributes.action)
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.identifier = ""
         super.init(coder: aDecoder)
     }
     
@@ -42,13 +43,8 @@ class CustomButton: UIButton {
         self.titleLabel?.font = attributes.titleFont
         self.layer.cornerRadius = attributes.cornorRadius
         setTitle(attributes.title, for: .normal)
-        
-    }
-    // MARK: - Button Action Configuration
-    private func configureAction(_ action: String) {
-        if !action.isEmpty {
-            addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        }
+        addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+
     }
     
     @objc private func buttonTapped() {
@@ -69,5 +65,5 @@ struct ButtonConfigration: ButtonConfigurable {
     var cornorRadius: CGFloat
     var title: String
     var action: String // Add action property
-
+    
 }

@@ -14,11 +14,7 @@ protocol TextFieldActionDelegate: AnyObject {
 }
 
 struct TextFieldBuilder: UIComponentBuilder {
-    weak var textFieldActionDelegate: TextFieldActionDelegate?
 
-    init(delegate: TextFieldActionDelegate?) {
-        self.textFieldActionDelegate = delegate
-    }
     
     func build(element: Field) -> CustomTextField {
         let fontSize = CGFloat(16)
@@ -29,9 +25,6 @@ struct TextFieldBuilder: UIComponentBuilder {
                                                   placeholder: element.properties?.placeHolder ?? ""
         )
         let customTextField = CustomTextField(attributes: configuration)
-        customTextField.setTextFieldAction { stringValue in
-            self.textFieldActionDelegate?.handleTextFieldAction(element.identifier ?? "", value: stringValue)
-        }
         return customTextField
     }
 }

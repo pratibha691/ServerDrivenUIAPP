@@ -16,16 +16,12 @@ struct Components {
 class LoginViewModel {
     
     private var service: NetworkServiceProtocol
-    weak var buttonDelegate: ButtonActionDelegate?
-    weak var textFieldDelegate: TextFieldActionDelegate?
 
     var components: [Components] =  []
     var currentScreenData:OnBoardingModel?
     
-    init(service: NetworkServiceProtocol, buttonDelegate: ButtonActionDelegate?, textFieldDelegate: TextFieldActionDelegate?) {
+    init(service: NetworkServiceProtocol) {
         self.service = service
-        self.buttonDelegate = buttonDelegate
-        self.textFieldDelegate = textFieldDelegate
     }
     
     func load(completion: @escaping(Bool) -> Void)  {
@@ -34,7 +30,7 @@ class LoginViewModel {
             switch result {
             case .success(let screenModel):
                 self?.currentScreenData = screenModel
-                let screenBuilder = ScreenBuilder(elements: screenModel.body?.fields ?? [], buttonDelegate: self?.buttonDelegate, textFieldDelegate: self?.textFieldDelegate)
+                let screenBuilder = ScreenBuilder(elements: screenModel.body?.fields ?? [])
                 self?.components = [Components(viewData: screenModel.body?.fields ?? [], view: screenBuilder.buildUIComponents())]
                 // Handle the successfully loaded and decoded `ScreenModel`.
                 // Example: update your UI with the loaded data.

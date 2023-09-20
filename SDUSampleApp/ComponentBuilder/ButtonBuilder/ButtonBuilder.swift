@@ -16,11 +16,8 @@ protocol ButtonActionDelegate: AnyObject {
     func handleButtonAction(_ action: ButtonAction)
 }
 struct ButtonBuilder: UIComponentBuilder {
-    weak var buttonActionDelegate: ButtonActionDelegate?
     
-    init(delegate: ButtonActionDelegate?) {
-        self.buttonActionDelegate = delegate
-    }
+  
     func build(element: Field) -> CustomButton {
         let fontSize = CGFloat(16)
         let configuration = ButtonConfigration(identifier: element.identifier ?? "",
@@ -32,13 +29,6 @@ struct ButtonBuilder: UIComponentBuilder {
                                                action: element.properties?.action?.type ?? ""
         )
         let customButton = CustomButton(attributes: configuration)
-        customButton.setButtonAction {
-            if let action = element.properties?.action?.type {
-                self.buttonActionDelegate?.handleButtonAction(ButtonAction(rawValue: action) ?? .login)
-            } else {
-                debugPrint("Action not provided")
-            }
-        }
         return customButton
     }
 }
