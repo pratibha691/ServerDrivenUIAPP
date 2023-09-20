@@ -25,9 +25,7 @@ struct ButtonBuilder: UIComponentBuilder {
                                                titleColor: element.properties?.color ?? "000000",
                                                titleFont: UIFont.systemFont(ofSize: fontSize),
                                                cornorRadius: 12,
-                                               title: element.properties?.title ?? "",
-                                               action: element.properties?.action?.type ?? ""
-        )
+                                               title: element.properties?.title ?? "")
         let customButton = CustomButton(attributes: configuration)
         return customButton
     }

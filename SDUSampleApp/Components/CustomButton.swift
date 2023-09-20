@@ -63,7 +63,5 @@ struct ButtonConfigration: ButtonConfigurable {
     var titleColor: String
     var titleFont: UIFont
     var cornorRadius: CGFloat
-    var title: String
-    var action: String // Add action property
-    
+    var title: String    
 }
