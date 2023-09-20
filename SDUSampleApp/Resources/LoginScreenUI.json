@@ -63,7 +63,7 @@
             "id":5,
             "type": "button",
             "text": "Forgot Password?",
-            "action": "forgot_password",
+            "action": "forgotPassword",
             "style": {
                 "color": "#ffffff",
                 "fontSize": 14

@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel = LoginViewModel(service: LocalService())
+        viewModel = LoginViewModel(service: LocalService(), delegate: self)
         viewModel.load { [weak self] success in
             if let dataV = self?.viewModel.components.first {
                 for someView in dataV.view {
@@ -25,26 +25,22 @@ class LoginViewController: UIViewController {
                     self?.contentView.addArrangedSubview(tempView)
                 }
             }
-//            for element in self?.viewModel.components ?? [] {
-//                let someView = self?.viewModel.components?.view[index]
-//                let dataV = self?.viewModel.components?.viewData[index]
-//
-//                let tempView = UIView(frame: .zero)
-//                tempView.addSubview(someView!)
-//                someView.translatesAutoresizingMaskIntoConstraints = false
-//                someView.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: 100).isActive = true
-//                someView.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: 100).isActive = true
-//                someView.bottomAnchor.constraint(equalTo: tempView.bottomAnchor, constant: 100).isActive = true
-//                someView.topAnchor.constraint(equalTo: tempView.topAnchor, constant: 100).isActive = true
-//
-//
-//                self?.contentView.addArrangedSubview(tempView)
-//            }
         }
-       
-        /*
-        
-*/
     }
 }
 
+extension LoginViewController: ButtonActionDelegate {
+    // Implement the ButtonActionDelegate method to handle button actions.
+      func handleButtonAction(_ action: ButtonAction) {
+          switch action {
+          case .login:
+              // Handle login button action
+              debugPrint("Handle login button action")
+              break
+          case .forgotPassword:
+              // Handle forgot password button action
+              debugPrint("Handle forgot password button action")
+              break
+          }
+      }
+}

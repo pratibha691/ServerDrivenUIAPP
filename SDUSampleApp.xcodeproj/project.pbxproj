@@ -128,7 +128,7 @@
 				CA06C0422AB9617A00C63E59 /* ScreenBuilder.swift */,
 				CA06C0442AB961D700C63E59 /* TextFieldBuilder.swift */,
 				CA06C0462AB9627F00C63E59 /* LabelBuilder.swift */,
-				CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */,
+				CA06C04E2ABABA3E00C63E59 /* ButtonBuilder */,
 			);
 			path = ComponentBuilder;
 			sourceTree = "<group>";
@@ -148,6 +148,14 @@
 				1040C8922AB84C6700968E7A /* Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CA06C04E2ABABA3E00C63E59 /* ButtonBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */,
+			);
+			path = ButtonBuilder;
 			sourceTree = "<group>";
 		};
 		CA0898302AB432A000521291 = {
