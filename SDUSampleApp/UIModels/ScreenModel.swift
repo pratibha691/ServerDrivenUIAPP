@@ -53,7 +53,7 @@ struct Properties: Decodable {
     var color:String?
     var backgroundColor: String?
     var padding:Padding?
-    var height:Int?
+    var size:Size?
     
     enum CodingKeys: String, CodingKey {
         case label, placeHolder, mandatory, accessibility
@@ -62,7 +62,7 @@ struct Properties: Decodable {
         case color
         case backgroundColor
         case padding
-        case height
+        case size
     }
 }
 
@@ -86,4 +86,10 @@ struct Validation: Decodable {
 struct Max: Decodable {
     var value: Int?
     var message: String?
+}
+
+// MARK: - Size
+struct Size: Decodable {
+    var height: Int?
+    var witdh: Int?
 }

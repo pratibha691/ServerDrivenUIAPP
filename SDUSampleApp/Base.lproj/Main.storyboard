@@ -69,6 +69,7 @@
                     <connections>
                         <outlet property="contentView" destination="HPV-6q-9Ca" id="mxs-PO-jnJ"/>
                         <outlet property="scrollContentView" destination="Ccl-wP-Upt" id="5Am-Xe-bbg"/>
+                        <outlet property="scrollView" destination="TaM-xx-bv5" id="D8g-Al-X7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

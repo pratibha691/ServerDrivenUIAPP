@@ -30,7 +30,10 @@
                         "right": 20.0,
                         "bottom": 10.0
                     },
-                    "height":40
+                    "size": {
+                        "height":40,
+                        "width":0
+                    }
                 }
             },
             {
@@ -53,7 +56,10 @@
                         "right": 20.0,
                         "bottom": 10.0
                     },
-                    "height":40
+                    "size": {
+                        "height":40,
+                        "width":0
+                    }
                 }
             },
             {
@@ -70,12 +76,15 @@
                     "backgroundColor": "#0074cc",
                     "color": "#ffffff",
                     "padding": {
-                        "top": 50.0,
+                        "top": 20.0,
                         "left": 20.0,
                         "right": 20.0,
                         "bottom": 10.0
                     },
-                    "height":50
+                    "size": {
+                        "height":50,
+                        "width":0
+                    }
                 }
             },
             {
@@ -97,7 +106,10 @@
                         "right": 20.0,
                         "bottom": 10.0
                     },
-                    "height":30
+                    "size": {
+                        "height":30,
+                        "width":0
+                    }
                 }
             }
         ]
