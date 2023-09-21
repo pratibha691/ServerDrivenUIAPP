@@ -26,11 +26,10 @@ extension UIViewController {
             fatalError("Failed to instantiate view controller from storyboard.")
         }
     }
-    func genrateUIView(padding:Padding?, size: Size?, viewG:UIView) -> UIView {
+    func genrateUIView(padding: Padding?, size: Size?, viewG: UIView) -> UIView {
         let tempView = UIView(frame: .zero)
         tempView.clipsToBounds = true
         tempView.addSubview(viewG)
-        //viewG.backgroundColor = .gray
         viewG.translatesAutoresizingMaskIntoConstraints = false
         viewG.leadingAnchor.constraint(equalTo: tempView.leadingAnchor, constant: CGFloat(padding?.left ?? 16)).isActive = true
         viewG.trailingAnchor.constraint(equalTo: tempView.trailingAnchor, constant: -CGFloat(padding?.right ?? 16)).isActive = true

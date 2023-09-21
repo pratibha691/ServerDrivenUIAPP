@@ -33,8 +33,8 @@ class CustomTextField: UITextField {
         super.init(coder: aDecoder)
     }
     
-    //MARK: - UpdateUI
-    private func setupUI(_ attributes:TextFieldConfigurable) {
+    // MARK: - UpdateUI
+    private func setupUI(_ attributes: TextFieldConfigurable) {
         self.backgroundColor = attributes.backgroundColor
         self.textColor = attributes.textColor
         self.font = attributes.font

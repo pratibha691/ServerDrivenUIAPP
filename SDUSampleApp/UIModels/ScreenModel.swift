@@ -30,7 +30,7 @@ struct Padding: Decodable {
 
 // MARK: - Field
 struct Field: Decodable {
-    var type:ComponentsType?
+    var type: ComponentsType?
     var identifier: ComponentIdentifier
     var properties: Properties?
 }
@@ -50,10 +50,10 @@ struct Properties: Decodable {
     var validation: Validation?
     var title, url: String?
     var action: Action?
-    var color:String?
+    var color: String?
     var backgroundColor: String?
-    var padding:Padding?
-    var size:Size?
+    var padding: Padding?
+    var size: Size?
     
     enum CodingKeys: String, CodingKey {
         case label, placeHolder, mandatory, accessibility

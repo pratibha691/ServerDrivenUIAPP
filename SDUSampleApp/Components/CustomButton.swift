@@ -36,8 +36,8 @@ class CustomButton: UIButton {
         super.init(coder: aDecoder)
     }
     
-    //MARK: - UpdateUI
-    private func setupUI(_ attributes:ButtonConfigurable) {
+    // MARK: - UpdateUI
+    private func setupUI(_ attributes: ButtonConfigurable) {
         self.backgroundColor = UIColor(hex: attributes.backgroundColor)
         self.setTitleColor(UIColor(hex: attributes.titleColor), for: .normal)
         self.titleLabel?.font = attributes.titleFont

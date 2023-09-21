@@ -29,8 +29,8 @@ class CustomLabel: UILabel {
         super.init(coder: aDecoder)
     }
     
-    //MARK: - UpdateUI
-    private func setupUI(_ attributes:LabelConfigurable) {
+    // MARK: - UpdateUI
+    private func setupUI(_ attributes: LabelConfigurable) {
         self.textColor = attributes.textColor
         self.font = attributes.font
         self.text = attributes.text
@@ -43,4 +43,3 @@ struct LabelConfigration: LabelConfigurable {
     var textColor: UIColor
     var font: UIFont
 }
-

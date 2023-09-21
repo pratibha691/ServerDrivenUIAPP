@@ -16,8 +16,7 @@ protocol ButtonActionDelegate: AnyObject {
     func handleButtonAction(_ action: ButtonAction)
 }
 struct ButtonBuilder: UIComponentBuilder {
-    
-  
+      
     func build(element: Field) -> CustomButton {
         let fontSize = CGFloat(16)
         let configuration = ButtonConfigration(identifier: element.identifier,
@@ -30,4 +29,3 @@ struct ButtonBuilder: UIComponentBuilder {
         return customButton
     }
 }
-

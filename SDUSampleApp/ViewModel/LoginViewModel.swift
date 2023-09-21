@@ -15,7 +15,7 @@ struct Components {
 protocol LoginViewModelProtocol {
     func load(completion: @escaping(Bool) -> Void)
     var components: [Components] { get }
-    var currentScreenData:ScreenModel? { get }
+    var currentScreenData: ScreenModel? { get }
 
 }
 class LoginViewModel: LoginViewModelProtocol {
@@ -23,13 +23,13 @@ class LoginViewModel: LoginViewModelProtocol {
     private var service: NetworkServiceProtocol
 
     var components: [Components] =  []
-    var currentScreenData:ScreenModel?
+    var currentScreenData: ScreenModel?
     
     init(service: NetworkServiceProtocol) {
         self.service = service
     }
     
-    func load(completion: @escaping(Bool) -> Void)  {
+    func load(completion: @escaping(Bool) -> Void) {
         
         service.load("login") { [weak self](result: Result<ScreenModel, Error>) in
             switch result {
