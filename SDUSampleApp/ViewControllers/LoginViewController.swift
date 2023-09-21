@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
     @IBOutlet weak var contentView: UIStackView!
     var viewModel: LoginViewModelProtocol!
@@ -25,7 +26,7 @@ class LoginViewController: UIViewController {
                 for index in dataV.view.indices {
                     let dataValue = dataV.viewData[index]
                     let someView = dataV.view[index]
-                    let tempView = self?.genrateUIView(padding: dataValue.properties?.padding, viewG: someView) ?? UIView()
+                    let tempView = self?.genrateUIView(padding: dataValue.properties?.padding, size: dataValue.properties?.size, viewG: someView) ?? UIView()
                     if let button = someView as? CustomButton {
                         //self?.handleButtonAction(button)
                         if let closure = self?.buttonActions[button.identifier] {
