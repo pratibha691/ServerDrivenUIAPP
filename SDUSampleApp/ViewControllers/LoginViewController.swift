@@ -12,7 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollContentView: UIView!
     @IBOutlet weak var contentView: UIStackView!
     var viewModel: LoginViewModelProtocol!
-    
+    typealias ButtonAction = () -> Void
+    let buttonActions: [ComponentIdentifier : ButtonAction] = [.loginButton : { print("login button tapped")}, .forgotPasswordButton : { print("forgot password button tapped")}]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,28 +28,20 @@ class LoginViewController: UIViewController {
                     let someView = dataV.view[index]
                     let tempView = self?.genrateUIView(padding: dataValue.properties?.padding, size: dataValue.properties?.size, viewG: someView) ?? UIView()
                     if let button = someView as? CustomButton {
-                        self?.handleButtonAction(button)
-                    }
-                    if let textField = someView as? CustomTextField {
-                        textField.delegate = self
+                        //self?.handleButtonAction(button)
+                        if let closure = self?.buttonActions[button.identifier] {
+                            button.setButtonAction {
+                                closure()
+                            }
+                        }
+                                                if let textField = someView as? CustomTextField {
+                                                    textField.delegate = self
+                                                }
                     }
                     tempView.backgroundColor = .white
                     self?.contentView.addArrangedSubview(tempView)
-                }
-            }
-        }
-    }
-}
 
-extension LoginViewController {
-    func handleButtonAction(_ button: CustomButton) {
-        button.setButtonAction {
-            switch button.identifier {
-            case .loginButton:
-                debugPrint("Handle login button action")
-            default:
-                debugPrint("Action not handled")
-                
+                }
             }
         }
     }
