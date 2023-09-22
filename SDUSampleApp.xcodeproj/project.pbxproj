@@ -20,9 +20,11 @@
 		CA06C0492AB962C400C63E59 /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */; };
 		CA06C04D2AB9827500C63E59 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C04C2AB9827500C63E59 /* UIColorExtension.swift */; };
 		CA06C0522ABAF24000C63E59 /* ComponentIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0512ABAF24000C63E59 /* ComponentIdentifier.swift */; };
-		CA06C05C2ABAFD2600C63E59 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0572ABAFD2600C63E59 /* UIViewControllerExtension.swift */; };
+		CA06C05C2ABAFD2600C63E59 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0572ABAFD2600C63E59 /* UIViewExtension.swift */; };
 		CA06C05E2ABAFD2600C63E59 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0592ABAFD2600C63E59 /* StringExtension.swift */; };
 		CA06C0602ABAFD2600C63E59 /* ViewcontrollerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C05B2ABAFD2600C63E59 /* ViewcontrollerFactory.swift */; };
+		CA06C0652ABC40A100C63E59 /* ScrollViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0642ABC40A100C63E59 /* ScrollViewBuilder.swift */; };
+		CA06C0672ABC412D00C63E59 /* ComponentBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA06C0662ABC412D00C63E59 /* ComponentBuilderFactory.swift */; };
 		CA08983D2AB432A000521291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983C2AB432A000521291 /* AppDelegate.swift */; };
 		CA08983F2AB432A000521291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08983E2AB432A000521291 /* SceneDelegate.swift */; };
 		CA0898412AB432A000521291 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0898402AB432A000521291 /* LoginViewController.swift */; };
@@ -75,9 +77,11 @@
 		CA06C0482AB962C400C63E59 /* ButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
 		CA06C04C2AB9827500C63E59 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CA06C0512ABAF24000C63E59 /* ComponentIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentIdentifier.swift; sourceTree = "<group>"; };
-		CA06C0572ABAFD2600C63E59 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		CA06C0572ABAFD2600C63E59 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CA06C0592ABAFD2600C63E59 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		CA06C05B2ABAFD2600C63E59 /* ViewcontrollerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewcontrollerFactory.swift; sourceTree = "<group>"; };
+		CA06C0642ABC40A100C63E59 /* ScrollViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBuilder.swift; sourceTree = "<group>"; };
+		CA06C0662ABC412D00C63E59 /* ComponentBuilderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBuilderFactory.swift; sourceTree = "<group>"; };
 		CA0898392AB432A000521291 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08983C2AB432A000521291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA08983E2AB432A000521291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,7 +178,9 @@
 				CA06C0422AB9617A00C63E59 /* ScreenBuilder.swift */,
 				CA06C0442AB961D700C63E59 /* TextFieldBuilder.swift */,
 				CA06C0462AB9627F00C63E59 /* LabelBuilder.swift */,
+				CA06C0642ABC40A100C63E59 /* ScrollViewBuilder.swift */,
 				CA06C04E2ABABA3E00C63E59 /* ButtonBuilder */,
+				CA06C0662ABC412D00C63E59 /* ComponentBuilderFactory.swift */,
 			);
 			path = ComponentBuilder;
 			sourceTree = "<group>";
@@ -207,7 +213,7 @@
 		CA06C0562ABAFD2600C63E59 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CA06C0572ABAFD2600C63E59 /* UIViewControllerExtension.swift */,
+				CA06C0572ABAFD2600C63E59 /* UIViewExtension.swift */,
 				CA06C0592ABAFD2600C63E59 /* StringExtension.swift */,
 				CA06C04C2AB9827500C63E59 /* UIColorExtension.swift */,
 			);
@@ -526,8 +532,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0898742AB481AF00521291 /* NetworkServiceProtocol.swift in Sources */,
+				CA06C0672ABC412D00C63E59 /* ComponentBuilderFactory.swift in Sources */,
 				10B036C42ABADE0D000CD13F /* ScreenModel.swift in Sources */,
-				CA06C05C2ABAFD2600C63E59 /* UIViewControllerExtension.swift in Sources */,
+				CA06C05C2ABAFD2600C63E59 /* UIViewExtension.swift in Sources */,
 				CA06C0492AB962C400C63E59 /* ButtonBuilder.swift in Sources */,
 				CA06C0472AB9627F00C63E59 /* LabelBuilder.swift in Sources */,
 				CA06C0452AB961D800C63E59 /* TextFieldBuilder.swift in Sources */,
@@ -536,6 +543,7 @@
 				CA06C0522ABAF24000C63E59 /* ComponentIdentifier.swift in Sources */,
 				CA06C0602ABAFD2600C63E59 /* ViewcontrollerFactory.swift in Sources */,
 				CA0898412AB432A000521291 /* LoginViewController.swift in Sources */,
+				CA06C0652ABC40A100C63E59 /* ScrollViewBuilder.swift in Sources */,
 				1040C88F2AB848D000968E7A /* CustomButton.swift in Sources */,
 				CA06C05E2ABAFD2600C63E59 /* StringExtension.swift in Sources */,
 				1040C8912AB848DD00968E7A /* CustomTextField.swift in Sources */,

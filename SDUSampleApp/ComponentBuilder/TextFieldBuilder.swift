@@ -13,7 +13,7 @@ struct TextFieldBuilder: UIComponentBuilder {
     func build(element: Field) -> CustomTextField {
         let fontSize = CGFloat(16)
         let configuration = TextFieldConfigration(identifier: element.identifier,
-            backgroundColor: UIColor(hex: element.properties?.backgroundColor ?? ""),
+            backgroundColor: UIColor(hex: element.properties?.backgroundColor ?? "ffffff"),
             textColor: UIColor(hex: element.properties?.color ?? ""),
             font: UIFont.systemFont(ofSize: fontSize),
                                                   placeholder: element.properties?.placeHolder ?? ""

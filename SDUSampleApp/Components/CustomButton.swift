@@ -10,7 +10,7 @@ import UIKit
 
 protocol ButtonConfigurable {
     var identifier: ComponentIdentifier { get }
-    var backgroundColor: String { get }
+    var backgroundColor: String? { get }
     var titleColor: String { get }
     var titleFont: UIFont { get }
     var cornorRadius: CGFloat { get }
@@ -32,7 +32,7 @@ class CustomButton: UIButton {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.identifier = .none
+        self.identifier = .unknown
         super.init(coder: aDecoder)
     }
     
@@ -59,7 +59,7 @@ class CustomButton: UIButton {
 
 struct ButtonConfigration: ButtonConfigurable {
     var identifier: ComponentIdentifier
-    var backgroundColor: String
+    var backgroundColor: String?
     var titleColor: String
     var titleFont: UIFont
     var cornorRadius: CGFloat

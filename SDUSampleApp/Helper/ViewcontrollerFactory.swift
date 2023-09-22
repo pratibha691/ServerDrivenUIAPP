@@ -10,7 +10,7 @@ import Foundation
 class ViewControllerFactory {
     
     static func createLoginViewController() -> LoginViewController {
-       let loginVC: LoginViewController = LoginViewController.instantiateFromStoryboard(named: .main)
+       let loginVC: LoginViewController = LoginViewController()
         loginVC.viewModel = LoginViewModel(service: LocalService())
         return loginVC
     }

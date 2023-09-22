@@ -31,11 +31,13 @@ struct Padding: Decodable {
 // MARK: - Field
 struct Field: Decodable {
     var type: ComponentsType?
+    var fields: [Field]?
     var identifier: ComponentIdentifier
     var properties: Properties?
 }
 
 enum ComponentsType: String, Decodable {
+    case scrollView
     case textField
     case button
     case label
@@ -90,6 +92,6 @@ struct Max: Decodable {
 
 // MARK: - Size
 struct Size: Decodable {
-    var height: Int?
-    var witdh: Int?
+    var height: Double?
+    var witdh: Double?
 }

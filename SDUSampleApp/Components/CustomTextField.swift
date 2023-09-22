@@ -39,7 +39,7 @@ class CustomTextField: UITextField {
         self.textColor = attributes.textColor
         self.font = attributes.font
         self.placeholder = attributes.placeholder
-        borderStyle = .roundedRect
+        borderStyle = .line
         
     }
     

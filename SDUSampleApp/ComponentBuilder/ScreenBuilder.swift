@@ -21,27 +21,13 @@ class ScreenBuilder {
     }
     
     func buildUIComponents() -> [UIView] {
-            var components: [UIView] = []
-            
-            for element in self.elements {
-                switch element.type {
-                case .label:
-                    let labelBuilder = LabelBuilder()
-                    components.append(labelBuilder.build(element: element))
-                    
-                case .textField:
-                    let textFieldBuilder = TextFieldBuilder()
-                    components.append(textFieldBuilder.build(element: element))
-                    
-                case .button:
-                    let buttonBuilder = ButtonBuilder()
-                    components.append(buttonBuilder.build(element: element))
-                    
-                case .none:
-                    debugPrint("Test")
-                }
-            }
-            
-            return components
+        var components: [UIView] = []
+        
+        for element in self.elements {
+            let uiComponent = UIComponentBuilderFactory.build(element: element)
+            components.append(uiComponent)
         }
+        
+        return components
+    }
 }

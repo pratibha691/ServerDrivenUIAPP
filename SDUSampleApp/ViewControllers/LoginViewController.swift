@@ -8,12 +8,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scrollContentView: UIView!
-    @IBOutlet weak var contentView: UIStackView!
+    
     var viewModel: LoginViewModelProtocol!
     typealias ButtonAction = () -> Void
     let buttonActions: [ComponentIdentifier: ButtonAction] = [.loginButton: { print("login button tapped")}, .forgotPasswordButton: { print("forgot password button tapped")}]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,26 +20,30 @@ class LoginViewController: UIViewController {
         
     }
     private func loadData() {
-        
+        view.backgroundColor = .white
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        view.addSubview(stackView)
+        stackView.constrainEdgesToSuperview()
+ 
         viewModel.load { [weak self] (_) in
             if let dataV = self?.viewModel.components.first {
                 for index in dataV.view.indices {
                     let dataValue = dataV.viewData[index]
                     let someView = dataV.view[index]
-                    let tempView = self?.genrateUIView(padding: dataValue.properties?.padding, size: dataValue.properties?.size, viewG: someView) ?? UIView()
+                    let tempView = someView.genrateUIView(padding: dataValue.properties?.padding, size: dataValue.properties?.size) 
                     if let button = someView as? CustomButton {
-                        // self?.handleButtonAction(button)
                         if let closure = self?.buttonActions[button.identifier] {
                             button.setButtonAction {
                                 closure()
                             }
                         }
-                                                if let textField = someView as? CustomTextField {
-                                                    textField.delegate = self
-                                                }
+                        if let textField = someView as? CustomTextField {
+                            textField.delegate = self
+                        }
                     }
-                    tempView.backgroundColor = .white
-                    self?.contentView.addArrangedSubview(tempView)
+                    stackView.addArrangedSubview(tempView)
 
                 }
             }
